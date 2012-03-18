@@ -33,12 +33,10 @@ insert into users (id, login, password, name, surname, role_id,email) values (1,
 
 create table flights (
   id int not null auto_increment,
-  city_from_id char(255) not null,
-  city_to_id char(255) not null,
-  date_from datetime not null,
-  date_to datetime not null,
-  time_from datetime not null,
-  time_to datetime not null
+  city_from_id int not null,
+  city_to_id int not null,
+  datetime_from datetime not null,
+  datetime_to datetime not null,
   plane_id int not null,
   price_economy int not null,
   price_business int not null,
@@ -48,27 +46,26 @@ create table flights (
   price_b_infant int not null,
 
   primary key (id),
-  foreign key (plane_id) references palnes(id) on delete cascade,
-  ?
+  foreign key (plane_id) references planes(id) on delete cascade,
+  foreign key (city_from_id) references cities(id) on delete cascade,
+  foreign key (city_to_id) references cities(id) on delete cascade	
 )engine=MyISAM;
 
 create table cities (
   id int not null auto_increment,
   name char(255) not null,
 
-  primary key (id),
-
+  primary key (id)
 )engine=MyISAM;
 
 create table planes (
   id int not null auto_increment,
   model char(255) not null,
-  seats_economy number not null,
-  seats_business number not null,
-  luggage_count number not null,
+  seats_economy int not null,
+  seats_business int not null,
+  luggage_count int not null,
 
-  primary key (id),
-
+  primary key (id)
 ) engine=MyISAM;
 
 create table tickets (
@@ -85,38 +82,39 @@ create table classes (
   id int not null auto_increment,
   name char(255) not null,
 
-  primary key (id),
-
+  primary key (id)
 )engine=MyISAM;
+insert into classes (id, name) values (1, 'economy');
+insert into classes (id, name) values (2,'business');
 
 create table passengers (
   id int not null auto_increment,
   ticket_id int not null,
   name char(255) not null,
   surname char(255) not null,
-  child int,
-  luggage_count number,
-  passport_number,
-  telephone char(8) not null,
+  child boolean,
+  luggage_count int,
+  passport_int char(20),
+  telephone char(30) not null,
   
   primary key (id),
-  foreign key (ticket_id) references tickets(id) on delete cascade,
-  )engine=MyISAM;
+  foreign key (ticket_id) references tickets(id) on delete cascade
+)engine=MyISAM;
   
-  create table news (
+create table news (
   id int not null auto_increment,
-  title char(50) not null,
+  title char(255) not null,
   text text not null,
   user_id int not null,
   created_date datetime not null,
   
   primary key (id),
   foreign key (user_id) references users(id) on delete cascade
-  )engine=MyISAM;
+)engine=MyISAM;
   
-  create table comments (
+create table comments (
   id int not null auto_increment,
-  news_id not null,
+  news_id int not null,
   text text not null,
   user_id int not null,
   created_date datetime not null,
@@ -124,4 +122,4 @@ create table passengers (
   primary key (id),
   foreign key (user_id) references users(id) on delete cascade,
   foreign key (news_id) references news(id) on delete cascade 
-  )engine=MyISAM;
+)engine=MyISAM;

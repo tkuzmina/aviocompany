@@ -9,7 +9,10 @@
 
 <tr>
     <?=form_open(flights_url('planes/add/'))?>
-    <td><?=form_input('model','seats_economy','seats_business','luggage_count', "")?></td>
+    <td><?=form_input('model','')?></td>
+	<td><?=form_input('seats_economy','')?></td>
+	<td><?=form_input('seats_business','')?></td>
+	<td><?=form_input('luggage_count','')?></td>
     <td align="left"><?=form_submit('add_plane', $this->lang->line('ui_add_button'))?></td>
     <?=form_close();?>
 </tr>

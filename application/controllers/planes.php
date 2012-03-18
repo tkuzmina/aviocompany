@@ -43,3 +43,4 @@ class Planes extends CI_Controller {
 
         redirect_back($this->session);
     }
+}
