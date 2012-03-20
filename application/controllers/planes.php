@@ -8,7 +8,6 @@ class Planes extends CI_Controller {
 		$this->load->helper(array('form', 'url', 'html', 'aviocompany_url'));
 		$this->load->model(array('planes_model'));
 	
-	    init_events_page($this->session, $this->lang);
 	}
     function index() {
         $planes = $this->planes_model->get_planes();
