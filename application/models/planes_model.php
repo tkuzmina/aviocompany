@@ -17,6 +17,6 @@ class Planes_model extends CI_Model {
     }
 
     function update_plane($plane_id, $model, $seats_economy, $seats_business, $luggage_count) {
-        $this->db->update('planes', array("model" => $model), array('id' => $plane_id), array('seats_economy' => $seats_economy), array('seats_business' => $seats_business), array('luggage_count' => $luggage_count));
+        $this->db->update('planes', array("model" => $model,'seats_economy' => $seats_economy, 'seats_business' => $seats_business, 'luggage_count' => $luggage_count), array('id' => $plane_id));
     }
 }
