@@ -48,8 +48,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'aviocompany';
-$db['default']['password'] = 'aviocompany';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'aviocompany';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
