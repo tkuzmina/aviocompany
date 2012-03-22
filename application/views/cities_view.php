@@ -1,17 +1,17 @@
 <table class="adminTable">
 
     <div class='Title'><h1>Adim table: cities</h1></div>
+<tr><td>Name</td></tr>
+    
+       <tr>
+         <?=form_open('cities/add')?>  
+		<td align="left"><?=form_input('city','')?></td>
+		<td align="left"><?=form_submit('add_city', 'Add')?></td>
+		    <?=form_close();?>
+		</tr>
 
-    <?=form_open('cities/add')?>
+
         <table class="Content">
-            <tr><td width='100px'>Name:</td><td><?=form_input('name', '')?></td></tr>
-        </table>
-		<td align="left"><?=form_submit('add_city','Add')?></td>
-    <?=form_close();?>
-
-
-        <table class="Content">
-           <tr><td>Name</td></tr>
             <?php foreach ($cities as $city): ?>
 
             <?=form_open('cities/edit')?>

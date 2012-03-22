@@ -16,7 +16,7 @@ class Cities_model extends CI_Model {
         $this->db->delete('cities', array("id" => $city_id));
     }
 
-    function update_plane($city_id, $name) {
+    function update_city($city_id, $name) {
         $this->db->update('cities', array("name" => $name), array('id' => $city_id));
     }
 }
