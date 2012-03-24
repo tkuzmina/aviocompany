@@ -1,11 +1,11 @@
 <table class="adminTable">
 
-    <div class='Title'><h1>Adim table: cities</h1></div>
+    <div class='Title'><h1>Admin table: cities</h1></div>
 <tr><td>Name</td></tr>
     
        <tr>
          <?=form_open('cities/add')?>  
-		<td align="left"><?=form_input('city','')?></td>
+		<td align="left"><?=form_input('name','')?></td>
 		<td align="left"><?=form_submit('add_city', 'Add')?></td>
 		    <?=form_close();?>
 		</tr>
