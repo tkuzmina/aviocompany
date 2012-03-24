@@ -1,6 +1,20 @@
 <?php
 
 class Planes_model extends CI_Model {
+        function get_plane_map($include_all) {
+        $query = $this->db->query("select * from planes");
+        $planes = $query->result();
+        $plane_map = array();
+        if ($include_all) {
+            $plane_map[NIL] = "All";//
+        }
+
+        foreach($planes as $plane) {
+            $plane_map[$plane->id] = $plane->model;
+        }
+        return $plane_map;
+    }
+
 
     function get_planes() {
         $query = $this->db->query("select * from planes");
