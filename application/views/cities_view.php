@@ -2,9 +2,9 @@
 
     <div class='Title'><h1>Admin table: cities</h1></div>
 <tr><td>Name</td></tr>
-    
+
        <tr>
-         <?=form_open('cities/add')?>  
+        <?=form_open('cities/add')?>
 		<td align="left"><?=form_input('name','')?></td>
 		<td align="left"><?=form_submit('add_city', 'Add')?></td>
 		    <?=form_close();?>
@@ -29,3 +29,8 @@
         <?php endforeach; ?>
         </table>
 </table>
+<form action="cities/add" method="post">
+    <?= form_dropdown('city', $city_list)?>
+    <input type="submit" />
+</form>
+

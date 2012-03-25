@@ -19,4 +19,13 @@ class Cities_model extends CI_Model {
     function update_city($city_id, $name) {
         $this->db->update('cities', array("name" => $name), array('id' => $city_id));
     }
+
+    function get_city_list() {
+        $cities = $this->get_cities();
+        $city_list = array();
+        foreach ($cities as $city){
+            $city_list[$city->id] = $city->name;
+        }
+        return $city_list;
+    }
 }

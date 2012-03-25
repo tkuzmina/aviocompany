@@ -20,6 +20,6 @@ class Flights extends CI_Controller {
         $this->load->view('flight_view', $data);
     }
 	
-    $data['models'] = $this->flights_model->get_dropdown_models();
+//    $data['models'] = $this->flights_model->get_dropdown_models();
   
 }

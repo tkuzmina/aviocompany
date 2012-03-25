@@ -11,7 +11,9 @@ class Cities extends CI_Controller {
 	}
     function index() {
         $cities = $this->cities_model->get_cities();
+        $city_list = $this->cities_model->get_city_list();
         $data['cities'] = $cities;
+        $data['city_list'] = $city_list;
         $this->load->view('cities_view', $data);
     }
 	
@@ -33,4 +35,6 @@ class Cities extends CI_Controller {
         $this->cities_model->update_city($city_id,$name);
         redirect("cities");
     }
+
+
 }
