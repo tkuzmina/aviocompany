@@ -6,10 +6,8 @@ class Users extends CI_Controller {
         parent::__construct();
 
         $this->load->library(array('encrypt', 'form_validation', 'session'));
-        $this->load->helper(array('form', 'url', 'html', 'aviocompany_url'));
+        $this->load->helper(array('form', 'url', 'html'));
         $this->load->model(array('users_model', 'roles_model'));
-
-        init_events_page($this->session, $this->lang);
     }
 
     function login() {
@@ -48,12 +46,11 @@ class Users extends CI_Controller {
     function add() {
         $login = $this->input->post('login');
         $password = $this->encrypt_password($this->input->post('password'));
-        $name = $this->input->post('name');
-        $surname = $this->input->post('surname');
+        $email = $this->input->post('email');
         $role_id = $this->input->post('role_id');
-        $this->users_model->insert_user($login, $password, $name, $surname, $role_id);
+        $this->users_model->insert_user($login, $password, $email, $role_id);
 
-        redirect_back($this->session);
+        redirect_back('users');
     }
 
     function delete() {
@@ -65,12 +62,11 @@ class Users extends CI_Controller {
 
     function edit() {
         $user_id = $this->input->post('user_id');
-        $name = $this->input->post('name');
-        $surname = $this->input->post('surname');
+        $email = $this->input->post('email');
         $role_id = $this->input->post('role_id');
-        $this->users_model->update_user($user_id, $name, $surname, $role_id);
+        $this->users_model->update_user($user_id, $email, $role_id);
 
-        redirect_back($this->session);
+        redirect_back('users');
     }
 
     function register() {
@@ -80,21 +76,12 @@ class Users extends CI_Controller {
     function do_register() {
         $login = $this->input->post('login');
         $password = $this->encrypt_password($this->input->post('password'));
-        $name = $this->input->post('name');
-        $surname = $this->input->post('surname');
+        $email = $this->input->post('email');
         $role_id = 1; // user
-        $this->users_model->insert_user($login, $password, $name, $surname, $role_id);
+        $this->users_model->insert_user($login, $password, $email, $role_id);
 
         $this->session->set_flashdata('message', 'Registration successful!');
-        redirect(events_url('events'));
-    }
-
-    private function encrypt_password($decrypted_password) {
-        return $this->encrypt->encode($decrypted_password);
-    }
-
-    private function decrypt_password($encrypted_password) {
-        return $this->encrypt->decode($encrypted_password);
+        redirect('users');
     }
 
 }

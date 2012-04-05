@@ -11,8 +11,9 @@ class Planes extends CI_Controller {
 	}
     function index() {
         $planes = $this->planes_model->get_planes();
-		
+		$plane_list = $this->planes_model->get_plane_list();
         $data['planes'] = $planes;
+		$data['plane_list'] = $plane_list;
         $this->load->view('planes_view', $data);
     }
 	

@@ -35,6 +35,8 @@
         <?php endforeach; ?>
         </table>
 
-
-
 </table>
+<form action="planes/add" method="post">
+    <?= form_dropdown('plane', $plane_list)?>
+    <input type="submit" />
+</form>

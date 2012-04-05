@@ -1,37 +1,32 @@
-<?php include("header.php"); ?>
-
-<h1><?=$this->lang->line('ui_user_management_label')?></h1>
+<h1>User menu</h1>
 
 <table class="adminTable">
 
 <tr align="center" bgcolor="lightgray">
-    <td><?=$this->lang->line('ui_user_login_label')?></td>
-    <td><?=$this->lang->line('ui_user_password_label')?></td>
-    <td><?=$this->lang->line('ui_user_name_label')?></td>
-    <td><?=$this->lang->line('ui_user_surname_label')?></td>
-    <td><?=$this->lang->line('ui_user_role_label')?></td>
-    <td><?=$this->lang->line('ui_actions_label')?></td>
+    <td>Login</td>
+    <td>Password</td>
+    <td>Email</td>
+    <td>Role</td>
+    <td>Actions</td>
 </tr>
 
 <tr>
-    <?=form_open(events_url('users/add/'))?>
+    <?=form_open('users/add/')?>
     <td><?=form_input('login', '')?></td>
     <td><?=form_password('password', '')?></td>
-    <td><?=form_input('name', '')?></td>
-    <td><?=form_input('surname', '')?></td>
+    <td><?=form_input('email', '')?></td>
     <td><?=form_dropdown("role_id", $roles, array())?></td>
-    <td align="left"><?=form_submit('add_user', $this->lang->line('ui_add_button'))?></td>
+    <td align="left"><?=form_submit('add_user', Add)?></td>
     <?=form_close();?>
 </tr>
 
 <?php foreach ($users as $user): ?>
 <tr>
-    <?=form_open(events_url('users/edit/'))?>
+    <?=form_open('users/edit/')?>
     <?=form_hidden('user_id', $user->id)?>
     <td><?=$user->login?></td>
     <td>*****</td>
-    <td><?=form_input('name', $user->name)?></td>
-    <td><?=form_input('surname', $user->surname)?></td>
+    <td><?=form_input('email', $user->email)?></td>
     <td><?=form_dropdown("role_id", $roles, $user->role_id)?></td>
     <td align="left">
         <?=form_submit('edit_user', $this->lang->line('ui_edit_button'))?>
@@ -42,5 +37,3 @@
 </tr>
 <?php endforeach; ?>
 </table>
-
-<?php include("footer.php"); ?>
