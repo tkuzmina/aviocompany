@@ -9,14 +9,13 @@
     <td>Role</td>
     <td>Actions</td>
 </tr>
-
 <tr>
     <?=form_open('users/add/')?>
     <td><?=form_input('login', '')?></td>
     <td><?=form_password('password', '')?></td>
     <td><?=form_input('email', '')?></td>
     <td><?=form_dropdown("role_id", $roles, array())?></td>
-    <td align="left"><?=form_submit('add_user', Add)?></td>
+    <td align="left"><?=form_submit('add_user', "Add")?></td>
     <?=form_close();?>
 </tr>
 
