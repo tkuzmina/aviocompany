@@ -28,8 +28,8 @@
     <td><?=form_input('email', $user->email)?></td>
     <td><?=form_dropdown("role_id", $roles, $user->role_id)?></td>
     <td align="left">
-        <?=form_submit('edit_user', $this->lang->line('ui_edit_button'))?>
-        <a href='<?=events_url("users/delete?user_id=").$user->id?>'>
+        <?=form_submit('edit_user', "Edit")?>
+        <a href='<?="users/delete?user_id=".$user->id?>'>
         <span class="deleteIcon"><?=img('images/delete_icon.png')?></span></a>
     </td>
     <?=form_close();?>
