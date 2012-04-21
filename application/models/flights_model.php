@@ -1,6 +1,9 @@
 <?php
 
 class Flights_model extends CI_Model {
+            private $FLIGHT_SELECT = "
+            select city_from_id , city_to_id , datetime_from, datetime_to
+            from flights ";
 
     function get_flights() {
         $query = $this->db->query("select * from flights");

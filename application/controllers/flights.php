@@ -21,9 +21,21 @@ class Flights extends CI_Controller {
 	$data['plane_list'] = $plane_list;
     $data['city_list'] = $city_list;
     $this->load->view('flights_view', $data);
-
     }
 
+	
+	function filter() {
+        $this->set_search_params(
+            $this->input->post('flight_id'),
+            $this->input->post('city_from_id'),
+            $this->input->post('city_to_id'),
+            $this->input->post('datetime_from'),
+			$this->input->post('datetime_to')
+        );
+
+        redirect(events_url('events'));
+    }
+	
     function add() {
         $city_from_id = $this->input->post('city_from_id');
         $city_to_id = $this->input->post('city_to_id');
