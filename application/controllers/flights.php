@@ -12,17 +12,16 @@ class Flights extends CI_Controller {
     }
 
     function index() {
-    $flights = $this->flights_model->get_flights();
-	$planes = $this->planes_model->get_planes();
-	$plane_list = $this->planes_model->get_plane_list();
-    $city_list = $this->cities_model->get_city_list();
-		
-    $data['flights'] = $flights;
-	$data['plane_list'] = $plane_list;
-    $data['city_list'] = $city_list;
-    $this->load->view('flights_view', $data);
-    }
+        $flights = $this->flights_model->get_flights();
+        $planes = $this->planes_model->get_planes();
+        $plane_list = $this->planes_model->get_plane_list();
+        $city_list = $this->cities_model->get_city_list();
 
+        $data['flights'] = $flights;
+        $data['plane_list'] = $plane_list;
+        $data['city_list'] = $city_list;
+        $this->load->view('flights_view', $data);
+    }
 	
 	function filter() {
         $this->set_search_params(
@@ -33,7 +32,7 @@ class Flights extends CI_Controller {
 			$this->input->post('datetime_to')
         );
 
-        redirect(events_url('events'));
+        redirect('flights');
     }
 	
     function add() {

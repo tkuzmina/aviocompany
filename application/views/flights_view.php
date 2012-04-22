@@ -38,8 +38,8 @@
     <td><?=form_dropdown('city_to_id', $city_list, $flight->city_to_id)?></td>
     <td><?=form_input('datetime_from', $flight->datetime_from)?></td>
     <td><?=form_input('datetime_to', $flight->datetime_to)?></td>
-	<td><?=form_dropdown('plane_id',$plane_list,$flight->plane_id)?></td>
-	<td><?=form_input('price_economy',$flight->price_economy)?></td>
+	<td><?=form_dropdown('plane_id', $plane_list, $flight->plane_id)?></td>
+	<td><?=form_input('price_economy', $flight->price_economy)?></td>
 	<td><?=form_input('price_business', $flight->price_business)?></td>
 	<td><?=form_input('price_e_child', $flight->price_e_child)?></td>
 	<td><?=form_input('price_b_child', $flight->price_b_child)?></td>

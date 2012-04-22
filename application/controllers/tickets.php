@@ -12,7 +12,6 @@ class Tickets extends CI_Controller {
 	
 	
    function index() {
-   
         $classes=$this->classes_model->get_class_map();
         $tickets = $this->tickets_model->get_tickets();
 		$flights = $this->flights_model->get_flight_list();
