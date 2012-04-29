@@ -13,9 +13,12 @@ class Flight_search extends CI_Controller {
     function index() {
         $search_params = $this->session->userdata('search_params');
         $city_list = $this->cities_model->get_city_list();
+		$plane_list = $this->planes_model->get_plane_list();
 //        $flights = array();
-        $flights = $this->flights_model->search($search_params);
+$flights = $this->flights_model->get_flights_by_criteria($search_params);
+     //   $flights = $this->flights_model->search($search_params);
         $data['city_list'] = $city_list;
+		 $data['plane_list']=$plane_list;
         $data['city_from_id'] = $search_params['city_from_id'];
         $data['city_to_id'] = $search_params['city_to_id'];
         $data['flights'] = $flights;

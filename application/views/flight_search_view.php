@@ -15,7 +15,13 @@
         <td><?= $flight->id ?></td>
         <td><?= $flight->city_from_name ?></td>
         <td><?= $flight->city_to_name ?></td>
-        <td><?= $flight->plane_model ?></td>
+		<td><?= $flight->plane_model ?></td>
+        <td><?= $flight->price_economy ?></td>
+		<td><?= $flight->price_business ?></td>
+		<td><?= $flight->price_e_child ?></td>
+		<td><?= $flight->price_b_child ?></td>
+		<td><?= $flight->price_e_infant ?></td>
+		<td><?= $flight->price_b_infant ?></td>
     </tr>
 <?php endforeach ?>
 </table>
