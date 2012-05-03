@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 <table class="adminTable">
 
     <div class='Title'><h1>Planes</h1></div>
@@ -40,3 +41,4 @@
     <?= form_dropdown('plane', $plane_list)?>
     <input type="submit" />
 </form>
+<?php include("footer.php"); ?>

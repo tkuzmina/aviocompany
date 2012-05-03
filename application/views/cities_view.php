@@ -1,3 +1,5 @@
+<?php include("header.php"); ?>
+
 <table class="adminTable">
 
     <div class='Title'><h1>Admin table: cities</h1></div>
@@ -34,3 +36,4 @@
     <input type="submit" />
 </form>
 
+<?php include("footer.php"); ?>

@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 <table id="Flight">
 <tr>
     <td>City from:</td>
@@ -17,8 +18,8 @@
 <tr>
     <td><?=form_dropdown('city_from_id', $city_list, array())?></td>
     <td><?=form_dropdown('city_to_id', $city_list, array())?></td>
-    <td><?=form_input('datetime_from', '')?></td>
-    <td><?=form_input('datetime_to', '')?></td>
+    <td><?=form_input(array('class' => 'datepicker', 'name' => 'date_from'))?></td>
+    <td><?=form_input(array('class' => 'datepicker', 'name' => 'date_to'))?></td>
 	<td><?=form_dropdown('plane_id', $plane_list, array())?></td>
 	<td><?=form_input('price_economy', '')?></td>
 	<td><?=form_input('price_business', '')?></td>
@@ -36,8 +37,8 @@
 <tr>
     <td><?=form_dropdown('city_from_id', $city_list, $flight->city_from_id)?></td>
     <td><?=form_dropdown('city_to_id', $city_list, $flight->city_to_id)?></td>
-    <td><?=form_input('datetime_from', $flight->datetime_from)?></td>
-    <td><?=form_input('datetime_to', $flight->datetime_to)?></td>
+    <td><?=form_input(array('class' => 'datepicker', 'name' => 'date_from', 'value' => $flight->date_from))?></td>
+    <td><?=form_input(array('class' => 'datepicker', 'name' => 'date_to', 'value' => $flight->date_to))?></td>
 	<td><?=form_dropdown('plane_id', $plane_list, $flight->plane_id)?></td>
 	<td><?=form_input('price_economy', $flight->price_economy)?></td>
 	<td><?=form_input('price_business', $flight->price_business)?></td>
@@ -52,3 +53,4 @@
 <?=form_close();?>
 <?php endforeach; ?>
 </table>
+<?php include("footer.php"); ?>

@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 <table class="adminTable">
 
     <div class='Title'><h1>Tickets</h1></div>
@@ -29,4 +30,4 @@
         <?php endforeach; ?>
         </table>
 </table>
-
+<?php include("footer.php"); ?>

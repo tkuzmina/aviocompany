@@ -1,10 +1,11 @@
 <?php
 
 class Flights_model extends CI_Model {
-            private $FLIGHT_SELECT = "select * from flights ";
-  
+
     function get_flights_by_criteria($search_params) {
-        $sql = $this->FLIGHT_SELECT;
+        $sql =  "select f.*, c_to.name as city_to_name, c_from.name as city_from_name, p.model as plane_model
+            from flights f, cities c_to, cities c_from, planes p
+            where f.city_from_id = c_from.id and f.city_to_id = c_to.id and f.plane_id = p.id";
         $sql = $this->append_criteria($sql, $search_params);
 
         $query = $this->db->query($sql);
@@ -16,13 +17,23 @@ class Flights_model extends CI_Model {
             return $sql;
         }
 
-        if ($search_params['city_from_id']) {
-            $sql = $sql." where city_from_id=".$search_params['city_from_id'];
+        if ($this->is_defined('city_from_id', $search_params)) {
+            $sql = $sql." and f.city_from_id=".$search_params['city_from_id'];
         }
-        if ($search_params['city_to_id']) {
-            $sql = $sql." and city_to_id=".$search_params['city_to_id'];
+        if ($this->is_defined('city_to_id', $search_params)) {
+            $sql = $sql." and f.city_to_id=".$search_params['city_to_id'];
+        }
+        if ($this->is_defined('date_from', $search_params)) {
+            $sql = $sql." and f.date_from='".$search_params['date_from']."'";
+        }
+        if ($this->is_defined('date_to', $search_params)) {
+            $sql = $sql." and f.date_to='".$search_params['date_to']."'";
         }
         return $sql;
+    }
+
+    function is_defined($key, $array) {
+        return array_key_exists($key, $array) && $array[$key];
     }
   
     function get_flights() {
@@ -31,16 +42,16 @@ class Flights_model extends CI_Model {
         return $flights;
     }
 
-    function insert_flight($city_from_id,$city_to_id,$datetime_from,$datetime_to,$plane_id,$price_economy,$price_business,$price_e_child,$price_b_child,$price_e_infant,$price_b_infant){
-        $this->db->insert('flights', array("city_from_id" => $city_from_id,"city_to_id" => $city_to_id,"datetime_from" => $datetime_from,"datetime_to" => $datetime_to,"plane_id" => $plane_id,"price_economy" => $price_economy,"price_business" => $price_business,"price_e_child" => $price_e_child,"price_b_child" => $price_b_child,"price_e_infant" => $price_e_infant,"price_b_infant" => $price_b_infant));
+    function insert_flight($city_from_id,$city_to_id,$date_from,$date_to,$plane_id,$price_economy,$price_business,$price_e_child,$price_b_child,$price_e_infant,$price_b_infant){
+        $this->db->insert('flights', array("city_from_id" => $city_from_id,"city_to_id" => $city_to_id,"date_from" => $date_from,"date_to" => $date_to,"plane_id" => $plane_id,"price_economy" => $price_economy,"price_business" => $price_business,"price_e_child" => $price_e_child,"price_b_child" => $price_b_child,"price_e_infant" => $price_e_infant,"price_b_infant" => $price_b_infant));
     }
 
     function delete_flight($flight_id) {
         $this->db->delete('flights', array("id" => $flight_id));
     }
 
-    function update_flight($flight_id,$city_from_id,$city_to_id,$datetime_from,$datetime_to,$plane_id,$price_economy,$price_business,$price_e_child,$price_b_child,$price_e_infant,$price_b_infant) {
-        $this->db->update('flights', array("city_from_id" => $city_from_id,"city_to_id" => $city_to_id,"datetime_from" => $datetime_from,"datetime_to" => $datetime_to,"plane_id" => $plane_id,"price_economy" => $price_economy,"price_business" => $price_business,"price_e_child" => $price_e_child,"price_b_child" => $price_b_child,"price_e_infant" => $price_e_infant,"price_b_infant" => $price_b_infant), array("id" => $flight_id));
+    function update_flight($flight_id,$city_from_id,$city_to_id,$date_from,$date_to,$plane_id,$price_economy,$price_business,$price_e_child,$price_b_child,$price_e_infant,$price_b_infant) {
+        $this->db->update('flights', array("city_from_id" => $city_from_id,"city_to_id" => $city_to_id,"date_from" => $date_from,"date_to" => $date_to,"plane_id" => $plane_id,"price_economy" => $price_economy,"price_business" => $price_business,"price_e_child" => $price_e_child,"price_b_child" => $price_b_child,"price_e_infant" => $price_e_infant,"price_b_infant" => $price_b_infant), array("id" => $flight_id));
     }
 
 	function get_flight_list() {

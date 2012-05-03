@@ -28,8 +28,8 @@ class Flights extends CI_Controller {
             $this->input->post('flight_id'),
             $this->input->post('city_from_id'),
             $this->input->post('city_to_id'),
-            $this->input->post('datetime_from'),
-			$this->input->post('datetime_to')
+            $this->input->post('date_from'),
+			$this->input->post('date_to')
         );
 
         redirect('flights');
@@ -38,8 +38,8 @@ class Flights extends CI_Controller {
     function add() {
         $city_from_id = $this->input->post('city_from_id');
         $city_to_id = $this->input->post('city_to_id');
-        $datetime_from = $this->input->post('datetime_from');
-        $datetime_to = $this->input->post('datetime_to');
+        $date_from = $this->input->post('date_from');
+        $date_to = $this->input->post('date_to');
 		$plane_id = $this->input->post('plane_id');
 		$price_economy = $this->input->post('price_economy');
 		$price_business = $this->input->post('price_business');
@@ -47,7 +47,7 @@ class Flights extends CI_Controller {
 		$price_b_child = $this->input->post('price_b_child');
 		$price_e_infant = $this->input->post('price_e_infant');
 		$price_b_infant = $this->input->post('price_b_infant');
-        $this->flights_model->insert_flight($city_from_id,$city_to_id,$datetime_from,$datetime_to,$plane_id,$price_economy,$price_business,$price_e_child,$price_b_child,$price_e_infant,$price_b_infant);
+        $this->flights_model->insert_flight($city_from_id,$city_to_id,$date_from,$date_to,$plane_id,$price_economy,$price_business,$price_e_child,$price_b_child,$price_e_infant,$price_b_infant);
         redirect("flights");
     }
 	
@@ -55,8 +55,8 @@ class Flights extends CI_Controller {
 	    $flight_id = $this->input->post('flight_id');
         $city_from_id = $this->input->post('city_from_id');
         $city_to_id = $this->input->post('city_to_id');
-        $datetime_from = $this->input->post('datetime_from');
-        $datetime_to = $this->input->post('datetime_to');
+        $date_from = $this->input->post('date_from');
+        $date_to = $this->input->post('date_to');
 		$plane_id = $this->input->post('plane_id');
 		$price_economy = $this->input->post('price_economy');
 		$price_business = $this->input->post('price_business');
@@ -64,7 +64,7 @@ class Flights extends CI_Controller {
 		$price_b_child = $this->input->post('price_b_child');
 		$price_e_infant = $this->input->post('price_e_infant');
 		$price_b_infant = $this->input->post('price_b_infant');
-        $this->flights_model->update_flight($flight_id,$city_from_id,$city_to_id,$datetime_from,$datetime_to,$plane_id,$price_economy,$price_business,$price_e_child,$price_b_child,$price_e_infant,$price_b_infant);
+        $this->flights_model->update_flight($flight_id,$city_from_id,$city_to_id,$date_from,$date_to,$plane_id,$price_economy,$price_business,$price_e_child,$price_b_child,$price_e_infant,$price_b_infant);
         redirect("flights");
     }
 

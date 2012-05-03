@@ -1,3 +1,4 @@
+<?php include("header.php"); ?>
 <h1>User menu</h1>
 
 <table class="adminTable">
@@ -36,3 +37,4 @@
 </tr>
 <?php endforeach; ?>
 </table>
+<?php include("footer.php"); ?>
