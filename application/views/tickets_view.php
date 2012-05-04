@@ -1,33 +1,18 @@
 <?php include("header.php"); ?>
 <table class="adminTable">
 
-    <div class='Title'><h1>Tickets</h1></div>
-	
-       <tr>
-        <?=form_open('tickets/add')?>
-		<td align="left"><?=form_dropdown('flight_id',$flights, array())?></td>
-		<td align="left"><?=form_dropdown('class_id',$classes, array())?></td>
-		<td align="left"><?=form_submit('add_class', 'Add')?></td>
-		    <?=form_close();?>
-		</tr>
-
-
-        <table class="Content">
-            <?php foreach ($tickets as $ticket): ?>
-
-            <?=form_open('tickets/edit')?>
-            <?=form_hidden('ticket_id', $ticket->id)?>
-            <tr>
-                <td><?=form_input('flight_id',$flights, $ticket->flight_id)?></td>
-				<td><?=form_input('class_id',$classes, $ticket->class_id)?></td>
-                <td align="left">
-                    <?=form_submit('edit_ticket', 'Edit')?>
-                    <a href='<?='tickets/delete?ticket_id='.$ticket->id?>'>
-                    <span class="deleteIcon"><?=img('images/delete_icon.png')?></span></a>
-                </td>
-            </tr>
-            <?=form_close();?>
-        <?php endforeach; ?>
+    <div class='Title'><h1>Please,add information about ticket</h1></div>
+	<?=form_open('tickets/adding_passenger')?>
+        <table class="registerFormContent">
+            <tr><td>Name:</td><td><?=form_input('name', '')?></td></tr>
+            <tr><td>Surname:</td><td><?=form_password('surname')?></td></tr>
+            <tr><td>Telephone:</td><td><?=form_input('telephone', '')?></td></tr>
+			<tr><td>Luggage count:</td><td><?=form_input('luggage_count', '')?></td></tr>
+			<tr><td>Passport number:</td><td><?=form_input('passport_int', '')?></td></tr>
+			<tr><td>Child:</td><td><?=form_input('child', '')?></td></tr>
+            <tr><td></td><td><input class='Button' type='submit' value='Create' /></td></tr>
         </table>
+    <?=form_close();?>
+
 </table>
 <?php include("footer.php"); ?>

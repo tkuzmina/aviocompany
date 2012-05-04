@@ -21,10 +21,13 @@ class Tickets extends CI_Controller {
         $this->load->view('tickets_view', $data);
     }
 	
-	function add() {
-        $flight_id = $this->input->post('flight_id');
-		$class_id = $this->input->post('class_id');
-        $this->tickets_model->insert_ticket($flight_id, $class_id);
+	function adding_passenger() {
+        $name = $this->input->post('name');
+		$surname = $this->input->post('surname');
+		$telephone = $this->input->post('telephone');
+		$luggage_count = $this->input->post('luggage_count');
+		$passport_int = $this->input->post('passport_int');
+        $this->tickets_model->insert_passanger($name, $surname, $telephone, $luggage_count, $passport_int);
         redirect("tickets");
     }
 

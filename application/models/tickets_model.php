@@ -8,16 +8,8 @@ class Tickets_model extends CI_Model {
         return $tickets;
     }
 
-    function insert_ticket($flight_id,$class_id){
-        $this->db->insert('tickets', array("flight_id" => $flight_id,"class_id" => $class_id ));
-    }
-
-    function delete_ticket($ticket_id) {
-        $this->db->delete('tickets', array("id" => $ticket_id));
-    }
-
-    function update_ticket($ticket_id,$flight_id,$class_id) {
-        $this->db->update('tickets', array("flight_id" => $flight_id,"class_id" => $class_id ), array("id" => $ticket_id));
+    function insert_passanger($name, $surname, $telephone, $luggage_count, $passport_int){
+        $this->db->insert('passengers', array("name" => $name,"surname" => $surname,"telephone" => $telephone,"luggage_count" => $luggage_count,"passport_int" => $passport_int  ));
     }
 
 }

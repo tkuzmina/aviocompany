@@ -27,6 +27,7 @@
 		<td><?= $flight->price_b_child ?></td>
 		<td><?= $flight->price_e_infant ?></td>
 		<td><?= $flight->price_b_infant ?></td>
+		<td><input type='Button' value='Buy'  onclick='open_url("<?=('tickets/adding_passenger')?>'/></td>
     </tr>
 <?php endforeach ?>
 </table>
