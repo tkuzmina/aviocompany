@@ -2,10 +2,12 @@
 
 class Flights_model extends CI_Model {
 
+    private $FLIGHT_SQL = "select f.*, c_to.name as city_to_name, c_from.name as city_from_name, p.model as plane_model
+        from flights f, cities c_to, cities c_from, planes p
+        where f.city_from_id = c_from.id and f.city_to_id = c_to.id and f.plane_id = p.id";
+
     function get_flights_by_criteria($search_params) {
-        $sql =  "select f.*, c_to.name as city_to_name, c_from.name as city_from_name, p.model as plane_model
-            from flights f, cities c_to, cities c_from, planes p
-            where f.city_from_id = c_from.id and f.city_to_id = c_to.id and f.plane_id = p.id";
+        $sql = $this->FLIGHT_SQL;
         $sql = $this->append_criteria($sql, $search_params);
 
         $query = $this->db->query($sql);
@@ -40,6 +42,17 @@ class Flights_model extends CI_Model {
         $query = $this->db->query("select * from flights");
         $flights = $query->result();
         return $flights;
+    }
+
+    function get_flight($id) {
+        $sql = $this->FLIGHT_SQL." and f.id=".$id;
+        $query = $this->db->query($sql);
+        $result = $query->result();
+        if (count($result) == 0){
+            return NULL;
+        } else {
+            return $result[0];
+        }
     }
 
     function insert_flight($city_from_id,$city_to_id,$date_from,$date_to,$plane_id,$price_economy,$price_business,$price_e_child,$price_b_child,$price_e_infant,$price_b_infant){

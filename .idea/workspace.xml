@@ -72,49 +72,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="planes_view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/planes_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="632" selection-end="632" vertical-scroll-proportion="-9.153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="-9.807693">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flights_view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/flights_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="81" selection-start="579" selection-end="740" vertical-scroll-proportion="-3.9230769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flight_search_view.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="flight_search_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/flight_search_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="44" selection-start="942" selection-end="942" vertical-scroll-proportion="0.7798165">
+            <state line="80" column="0" selection-start="2991" selection-end="2991" vertical-scroll-proportion="-25.076923">
               <folding>
-                <marker date="1335798355960" expanded="true" signature="547:1107" placeholder="..." />
-                <marker date="1335798355960" expanded="true" signature="596:1078" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="719:960" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1181:1482" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1194:1276" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1600:1640" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1732:1740" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1732:1740" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1732:1740" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1732:1740" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1740:1753" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1746:1759" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1750:1763" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1819:2371" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="1828:2105" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="2114:2199" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="2208:2358" placeholder="..." />
+                <marker date="1336323113409" expanded="true" signature="2420:2911" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stage.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/stage.sql">
+      <file leaf-file-name="add_ticket_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/add_ticket_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="26" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
+            <state line="21" column="60" selection-start="515" selection-end="515" vertical-scroll-proportion="-13.730769">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ticket_view.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/ticket_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="20" selection-start="593" selection-end="593" vertical-scroll-proportion="0.62271065">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tickets.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/tickets.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="122" selection-start="1829" selection-end="1839" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="passengers_model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/passengers_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aviocompany.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/aviocompany.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="33" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="passenger_types_model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/passenger_types_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="27" selection-start="13" selection-end="34" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,25 +155,25 @@
       <file leaf-file-name="flight_search.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/flight_search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="29" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
+            <state line="24" column="43" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flights_model.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/flights_model.php">
+      <file leaf-file-name="stage.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/stage.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+            <state line="101" column="62" selection-start="2788" selection-end="2788" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="flights.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/flights.php">
+      <file leaf-file-name="classes_model.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/classes_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="38" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
+            <state line="4" column="26" selection-start="60" selection-end="73" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -162,22 +194,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/controllers/tickets.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/controllers/news.php" />
-        <option value="$PROJECT_DIR$/application/config/database.php" />
-        <option value="$PROJECT_DIR$/application/views/footer.php" />
-        <option value="$PROJECT_DIR$/application/views/cities_view.php" />
-        <option value="$PROJECT_DIR$/application/views/users_view.php" />
-        <option value="$PROJECT_DIR$/application/views/tickets_view.php" />
-        <option value="$PROJECT_DIR$/application/views/planes_view.php" />
-        <option value="$PROJECT_DIR$/application/views/news_view.php" />
-        <option value="$PROJECT_DIR$/application/views/flights_view.php" />
         <option value="$PROJECT_DIR$/application/views/header.php" />
-        <option value="$PROJECT_DIR$/sql/stage.sql" />
-        <option value="$PROJECT_DIR$/application/controllers/flight_search.php" />
+        <option value="$PROJECT_DIR$/application/views/flights_view.php" />
+        <option value="$PROJECT_DIR$/application/views/tickets_view.php" />
+        <option value="$PROJECT_DIR$/application/models/comments_model.php" />
         <option value="$PROJECT_DIR$/application/models/flights_model.php" />
+        <option value="$PROJECT_DIR$/application/models/tickets_model.php" />
+        <option value="$PROJECT_DIR$/application/views/ticket_view.php" />
         <option value="$PROJECT_DIR$/application/views/flight_search_view.php" />
+        <option value="$PROJECT_DIR$/application/helpers/avio_helper.php" />
+        <option value="$PROJECT_DIR$/application/controllers/flight_search.php" />
+        <option value="$PROJECT_DIR$/application/models/passenger_types_model.php" />
+        <option value="$PROJECT_DIR$/sql/stage.sql" />
+        <option value="$PROJECT_DIR$/css/aviocompany.css" />
+        <option value="$PROJECT_DIR$/application/views/add_ticket_view.php" />
+        <option value="$PROJECT_DIR$/application/models/passengers_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/tickets.php" />
       </list>
     </option>
   </component>
@@ -220,6 +252,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -249,21 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -278,6 +297,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,6 +336,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aviocompany" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -320,7 +361,6 @@
         </subPane>
       </pane>
       <pane id="Favorites" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,10 +385,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\git\aviocompany\application\models" />
+      <recent name="C:\Projects\git\aviocompany\application\helpers" />
+      <recent name="C:\Projects\git\aviocompany\application\views" />
       <recent name="C:\Projects\git\events\application\language\ru" />
       <recent name="C:\Projects\git\events\application\language\lv" />
-      <recent name="C:\Projects\git\events\application\language\en" />
-      <recent name="C:\Projects\git\events\application\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -430,9 +471,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32885906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33892617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -445,7 +486,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21656442" sideWeight="0.67114097" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22515337" sideWeight="0.67114097" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -496,118 +537,132 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/cities_view.php">
+    <entry file="file://$PROJECT_DIR$/application/models/flights_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1096" selection-end="1127" vertical-scroll-proportion="-24.846153">
+        <state line="49" column="36" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/comments_view.php">
+    <entry file="file://$PROJECT_DIR$/application/models/comments_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/news_modify.php">
+    <entry file="file://$PROJECT_DIR$/application/models/classes_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="26" selection-start="60" selection-end="73" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/news_view.php">
+    <entry file="file://$PROJECT_DIR$/application/helpers/events_url_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="-0.0">
+        <state line="16" column="39" selection-start="386" selection-end="386" vertical-scroll-proportion="0.17456648">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/register_view.php">
+    <entry file="file://$PROJECT_DIR$/application/helpers/avio_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="3" column="35" selection-start="73" selection-end="79" vertical-scroll-proportion="0.058959536">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tickets_view.php">
+    <entry file="file://$PROJECT_DIR$/application/models/passenger_types_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="31" selection-start="31" selection-end="31" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/users_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="52" selection-start="160" selection-end="160" vertical-scroll-proportion="0.21834862">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/planes_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="632" selection-end="632" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="467" selection-end="467" vertical-scroll-proportion="-9.807693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/flights_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="81" selection-start="579" selection-end="740" vertical-scroll-proportion="-3.9230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/create_db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="2" column="27" selection-start="13" selection-end="34" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sql/stage.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="26" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
+        <state line="101" column="62" selection-start="2788" selection-end="2788" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/aviocompany.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="33" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/tickets_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/flight_search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="29" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/flights.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="38" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/flights_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+        <state line="24" column="43" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/flight_search_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="44" selection-start="942" selection-end="942" vertical-scroll-proportion="0.7798165">
+        <state line="80" column="0" selection-start="2991" selection-end="2991" vertical-scroll-proportion="-25.076923">
           <folding>
-            <marker date="1335798355960" expanded="true" signature="547:1107" placeholder="..." />
-            <marker date="1335798355960" expanded="true" signature="596:1078" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="719:960" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1181:1482" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1194:1276" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1600:1640" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1732:1740" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1732:1740" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1732:1740" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1732:1740" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1740:1753" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1746:1759" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1750:1763" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1819:2371" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="1828:2105" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="2114:2199" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="2208:2358" placeholder="..." />
+            <marker date="1336323113409" expanded="true" signature="2420:2911" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/helpers/form_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="13" selection-start="3870" selection-end="3870" vertical-scroll-proportion="0.3325444">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/tickets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="122" selection-start="1829" selection-end="1839" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/passengers_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/add_ticket_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="60" selection-start="515" selection-end="515" vertical-scroll-proportion="-13.730769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/ticket_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="20" selection-start="593" selection-end="593" vertical-scroll-proportion="0.62271065">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,3 +1,33 @@
 .adminTable
 .Title{font:bold 16px Calibri;}
 .Content{width:700px;border:1px solid;}
+
+.flightsTable thead tr th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.flightsTable .price {
+    width: 40px;
+}
+.flightsTable .date {
+    width: 70px;
+}
+
+.searchTable .searchLabelRow td {
+    padding-top: 5px;
+}
+
+.searchTable tr td {
+    padding-right: 5px;
+}
+
+.fill {
+    width: 100%;
+}
+
+.passengerFormLabel {
+    text-align: right;
+    padding-left: 15px;
+    padding-right: 10px;
+}

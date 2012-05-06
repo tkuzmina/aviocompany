@@ -5,6 +5,7 @@ drop table if exists cities;
 drop table if exists planes;
 drop table if exists tickets;
 drop table if exists classes;
+drop table if exists passenger_types;
 drop table if exists passengers;
 drop table if exists news;
 drop table if exists comments;
@@ -87,18 +88,30 @@ create table classes (
 insert into classes (id, name) values (1, 'economy');
 insert into classes (id, name) values (2,'business');
 
+create table passenger_types (
+  id int not null auto_increment,
+  name char(255) not null,
+
+  primary key (id)
+)engine=MyISAM;
+insert into passenger_types (id, name) values (1, 'adult');
+insert into passenger_types (id, name) values (2,'child');
+insert into passenger_types (id, name) values (3,'infant');
+
 create table passengers (
   id int not null auto_increment,
   ticket_id int not null,
+  type_id int not null,
   name char(255) not null,
   surname char(255) not null,
-  child boolean,
-  luggage_count int,
-  passport_int char(20),
-  telephone char(30) not null,
-  
+  luggage_count int  not null,
+  passport_number char(20) not null,
+  issue_date date not null,
+  expiration_date date not null,
+
   primary key (id),
-  foreign key (ticket_id) references tickets(id) on delete cascade
+  foreign key (ticket_id) references tickets(id) on delete cascade,
+  foreign key (type_id) references passenger_types(id) on delete cascade
 )engine=MyISAM;
   
 create table news (
