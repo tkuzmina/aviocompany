@@ -2,15 +2,15 @@
 <html>
 <head>
 
-    <link href="/avio/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="/avio/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
-    <link href="/avio/css/aviocompany.css" rel="stylesheet" type="text/css"/>
+    <link href="/aviocompany/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="/aviocompany/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="/aviocompany/css/aviocompany.css" rel="stylesheet" type="text/css"/>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/base/jquery-ui.css" rel="stylesheet"
           type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-    <script src="/avio/js/aviocompany.js"></script>
-    <script src="/avio/js/bootstrap.js"></script>
+    <script src="/aviocompany/js/aviocompany.js"></script>
+    <script src="/aviocompany/js/bootstrap.js"></script>
 
     <script>
         $(function() {
@@ -20,10 +20,13 @@
 
 </head>
 <body>
-<div class="container">
-
+	<div id="container">
+	    <div class="header">
+	        <div class="logo"><img src="/aviocompany/img/logo.png" alt="LIDOTLETI.LV - Cheap airpline tickets, hotels, travels" title="Cheap flights - Lidot Leti" /></div>	
+	        <div class="phone">Phone:<span class="number"> &nbsp;(+371) 645 67 349</span></div>
+		</div>
     <div class="navbar">
-        <div class="navbar-inner">
+        <div class="navbar-inner">		
             <div class="container">
                 <a class="brand" href="flight_search">Main</a>
                 <ul class="nav">
@@ -35,3 +38,4 @@
             </div>
         </div>
     </div>
+	<div class="main">

@@ -1,10 +1,10 @@
 <?php include("header.php"); ?>
-
+<h1 class="title">Flights</h1>
 
 <a class="btn btn-primary" data-toggle="modal" href="#newFlight" >Add new flight</a>
 
 <table class="table table-bordered flightsTable">
-
+<h2>Existing flights</h2>
     <thead>
     <tr>
         <th rowspan="3">City from</th>
@@ -97,44 +97,44 @@
 </table>
 
 <div class="modal" id="newFlight">
-  <div class="modal-header">
-    <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
-    <h3>Add new plane</h3>
-  </div>
-  <?=form_open('flights/add', array("class" => "form-horizontal"))?>
-  <div class="modal-body">
-          <div class="control-group">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
+        <h2>Add new flight</h2>
+    </div>
+    <?=form_open('flights/add', array("class" => "form-horizontal"))?>
+    <div class="modal-body">
+        <div class="control-group">
             <label class="control-label" for="city_from_id">City from</label>
             <div class="controls">
                 <?=form_dropdown('city_from_id', $city_list, $flight->city_from_id, "class='span2' id='city_from_id'")?>
             </div>
-          </div>
-          <div class="control-group">
+        </div>
+        <div class="control-group">
             <label class="control-label" for="city_to_id">City to</label>
             <div class="controls">
                 <?=form_dropdown('city_to_id', $city_list, $flight->city_to_id, "class='span2' id='city_to_id'")?>
             </div>
-          </div>
-          <div class="control-group">
+        </div>
+        <div class="control-group">
             <label class="control-label" for="date_from">Date from</label>
             <div class="controls">
                 <?=form_input(array('class' => 'span2 datepicker', 'name' => 'date_from', 'id' => 'date_from', 'value' => $flight->date_from))?>
             </div>
-          </div>
-          <div class="control-group">
+        </div>
+        <div class="control-group">
             <label class="control-label" for="date_to">Date to</label>
             <div class="controls">
                 <?=form_input(array('class' => 'span2 datepicker', 'name' => 'date_to', 'id' => 'date_to', 'value' => $flight->date_to))?>
             </div>
-          </div>
-          <div class="control-group">
+        </div>
+        <div class="control-group">
             <label class="control-label" for="plane_id">Plane</label>
             <div class="controls">
                 <?=form_dropdown('plane_id', $plane_list, $flight->plane_id, "class='span2' id='plane_id'")?>
             </div>
-          </div>
+        </div>
 
-      <table class="table">
+        <table class="table">
           <thead>
           <tr>
               <th></th>
@@ -157,8 +157,8 @@
               <td><div class="input-append"><?=form_input(array('class' => 'span1', 'name' => 'price_e_infant', 'id' => 'price_e_infant', 'value' => $flight->price_e_infant))?><span class="add-on">Ls</span></div></td>
               <td><div class="input-append"><?=form_input(array('class' => 'span1', 'name' => 'price_b_infant', 'id' => 'price_b_infant', 'value' => $flight->price_b_infant))?><span class="add-on">Ls</span></div></td>
           </tr>
-      </table>
-  </div>
+        </table>
+    </div>
   <div class="modal-footer">
       <a class="btn" id="newFlightClose">Close</a>
       <?=form_submit('edit_flight', 'Save', "class='btn btn-primary'")?>

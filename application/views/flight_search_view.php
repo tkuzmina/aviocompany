@@ -1,6 +1,6 @@
 <?php include("header.php"); ?>
 
-<h1>Flight search</h1>
+<h1>Airtickets search and reservation</h1>
 <?=form_open('flight_search/search_by_params', array("class" => "form-horizontal"))?>
 <table class="searchTable">
     <tr class="searchLabelRow">
@@ -9,7 +9,7 @@
     </tr>
     <tr>
         <td colspan="3"><?=form_dropdown('city_from_id', $city_list, $city_from_id, "class='span3'")?></td>
-        <td><?=form_input(array('class' => 'datepicker', 'name' => 'date_from', 'value' => $date_from, 'class' => 'span2'))?></td>
+        <td><?=form_input(array('name' => 'date_from', 'value' => $date_from, 'class' => 'span2 datepicker'))?></td>
     </tr>
     <tr class="searchLabelRow">
         <td colspan="3"><strong>City to:</strong></td>
@@ -17,7 +17,7 @@
     </tr>
     <tr>
         <td colspan="3"><?=form_dropdown('city_to_id', $city_list, $city_to_id, "class='span3'")?></td>
-        <td><?=form_input(array('class' => 'datepicker', 'name' => 'date_to', 'value' => $date_to, 'class' => 'span2'))?></td>
+        <td><?=form_input(array('name' => 'date_to', 'value' => $date_to, 'class' => 'span2 datepicker'))?></td>
     </tr>
     <tr class="searchLabelRow">
         <td><strong>Adults:</strong></td>

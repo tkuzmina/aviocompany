@@ -24,7 +24,7 @@
 <?php foreach ($types as $type): ?>
 
     <?=form_hidden('type_id'.$passenger_no, $type)?>
-    <strong>Passenger <?= $passenger_no ?> (<?= $type_list[$type] ?>)</strong>
+    <h2>Passenger <?= $passenger_no ?> (<?= $type_list[$type] ?>)</h2>
     <table class="registerFormContent">
         <tr>
             <td class="passengerFormLabel">Name:</td><td><?=form_input('name'.$passenger_no, '')?></td>
@@ -42,7 +42,7 @@
 <?php endforeach ?>
 <?=form_hidden('passenger_count', $passenger_no)?>
 
-<?= form_submit("add", "Buy", "class='btn btn-primary'") ?>
+<?= form_submit("add", "Buy", "class='btn btn-primary pull-right'") ?>
 
  <?=form_close();?>
 
