@@ -1,86 +1,96 @@
 <?php include("header.php"); ?>
 
 <h1>Airtickets search and reservation</h1>
-<?=form_open('flight_search/search_by_params', array("class" => "form-horizontal"))?>
-<table class="searchTable">
-    <tr class="searchLabelRow">
-        <td colspan="3"><strong>City from:</strong></td>
-        <td><strong>Date from:</strong></td>
-    </tr>
-    <tr>
-        <td colspan="3"><?=form_dropdown('city_from_id', $city_list, $city_from_id, "class='span3'")?></td>
-        <td><?=form_input(array('name' => 'date_from', 'value' => $date_from, 'class' => 'span2 datepicker'))?></td>
-    </tr>
-    <tr class="searchLabelRow">
-        <td colspan="3"><strong>City to:</strong></td>
-        <td><strong>Date to:</strong></td>
-    </tr>
-    <tr>
-        <td colspan="3"><?=form_dropdown('city_to_id', $city_list, $city_to_id, "class='span3'")?></td>
-        <td><?=form_input(array('name' => 'date_to', 'value' => $date_to, 'class' => 'span2 datepicker'))?></td>
-    </tr>
-    <tr class="searchLabelRow">
-        <td><strong>Adults:</strong></td>
-        <td><strong>Children:</strong></td>
-        <td><strong>Infants:</strong></td>
-        <td><strong>Class:</strong></td>
-    </tr>
-    <tr>
-        <td><?=form_dropdown('adult_count', $count_list, $adult_count, "class='span1'")?></td>
-        <td><?=form_dropdown('child_count', $count_list, $child_count, "class='span1'")?></td>
-        <td><?=form_dropdown('infant_count', $count_list, $infant_count, "class='span1'")?></td>
-        <td><?=form_dropdown('class_id', $classes_list, $class_id, "class='fill'")?></td>
-    </tr>
-    <tr class="searchLabelRow">
-        <td colspan="4"><?=form_submit('search_flight', 'Search', "class='btn btn-primary pull-right'")?></td>
-    </tr>
+
+<?php include("search_view.php"); ?>
+
+<table class="fill">
+<tr>
+    <td><h1>Flights to:</h1></td>
+    <?php if ($date_return): ?><td><h1>Return flights:</h1></td><?php endif; ?>
+</tr>
+<tr>
+    <td>
+        <?php if ($flights_to): ?>
+        <table class='table table-bordered'>
+            <thead>
+            <tr>
+                <th></th>
+                <th>City from</th>
+                <th>City to</th>
+                <th>Date</th>
+                <th>Plane model</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+        <?php $checked = true ?>
+        <?php foreach ($flights_to as $flight_to): ?>
+            <tr>
+                <td><input type="radio" name="flight_to" id="flight_to" value='<?= $flight_to->id?>' <?= $checked ? 'checked' : "" ?>></td>
+                <td><?= $flight_to->city_from_name ?></td>
+                <td><?= $flight_to->city_to_name ?></td>
+                <td><?= $flight_to->date_from ?></td>
+                <td><?= $flight_to->plane_model ?></td>
+                <td><?= $flight_to->price ?></td>
+            </tr>
+        <?php $checked = false ?>
+        <?php endforeach; ?>
+        </table>
+        <?php else: ?>
+            <h2>No flights found for this date.</h2>
+        <?php endif; ?>
+    </td>
+    <td>
+    <?php if ($date_return): ?>
+    <?php if ($flights_return): ?>
+        <table class='table table-bordered'>
+            <thead>
+            <tr>
+                <th></th>
+                <th>City from</th>
+                <th>City to</th>
+                <th>Date</th>
+                <th>Plane model</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+    <?php $checked = true ?>
+    <?php foreach ($flights_return as $flight_return): ?>
+        <tr>
+            <td><input type="radio" name="flight_return" id="flight_return", value='<?= $flight_return->id?>' <?= $checked ? 'checked' : "" ?>></td>
+            <td><?= $flight_return->city_from_name ?></td>
+            <td><?= $flight_return->city_to_name ?></td>
+            <td><?= $flight_return->date_from ?></td>
+            <td><?= $flight_return->plane_model ?></td>
+            <td><?= $flight_return->price ?></td>
+        </tr>
+    <?php $checked = false ?>
+    <?php endforeach; ?>
+        </table>
+    <?php else: ?>
+        <h2>No flights found for this date.</h2>
+    <?php endif; ?>
+    </td>
+    <?php endif; ?>
+</tr>
 </table>
 
-<?=form_close();?>
+<?php if ($flights_to && (!$date_return || $flights_return)): ?>
+<button id="buy" class="btn btn-primary">Buy</button>
+<?php endif; ?>
 
-<h1>Results:</h1>
-<table class='table table-bordered'>
-
-    <thead>
-    <tr>
-        <th rowspan="3">City from</th>
-        <th rowspan="3">City to</th>
-        <th rowspan="3">Datetime from</th>
-        <th rowspan="3">Datetime to</th>
-        <th rowspan="3">Plane model</th>
-        <th colspan="6">Prices</th>
-        <th rowspan="3"></th>
-    </tr>
-    <tr>
-        <th colspan="3">Economy</th>
-        <th colspan="3">Business</th>
-    </tr>
-    <tr>
-        <th>Adult</th>
-        <th>Child</th>
-        <th>Infant</th>
-        <th>Adult</th>
-        <th>Child</th>
-        <th>Infant</th>
-    </tr>
-    </thead>
-<?php foreach ($flights as $flight): ?>
-    <tr>
-        <td><?= $flight->city_from_name ?></td>
-        <td><?= $flight->city_to_name ?></td>
-        <td><?= $flight->date_from ?></td>
-        <td><?= $flight->date_to ?></td>
-		<td><?= $flight->plane_model ?></td>
-        <td><?= $flight->price_economy ?></td>
-		<td><?= $flight->price_business ?></td>
-		<td><?= $flight->price_e_child ?></td>
-		<td><?= $flight->price_b_child ?></td>
-		<td><?= $flight->price_e_infant ?></td>
-		<td><?= $flight->price_b_infant ?></td>
-   		<td><a class='btn btn-primary' href=<?= "tickets/buy?flight_id=".$flight->id?>>Buy</a></td>
-    </tr>
-<?php endforeach ?>
-</table>
-
+<script>
+    $(function() {
+        $('button#buy').on('click', function() {
+            var flight_to = $("#flight_to:checked");
+            var flight_return = $("#flight_return:checked");
+            var url = "tickets/buy?flight_to_id=" + flight_to.val();
+            if (flight_return && flight_return.val()) {
+                url += "&flight_return_id=" + flight_return.val();
+            }
+            window.location.href = url;
+        });
+    });
+</script>
 
 <?php include("footer.php"); ?>

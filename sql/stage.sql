@@ -37,7 +37,8 @@ create table flights (
   city_from_id int not null,
   city_to_id int not null,
   date_from date not null,
-  date_to date not null,
+  time_from varchar(30) not null,
+  duration varchar(30) not null,
   plane_id int not null,
   price_economy int not null,
   price_business int not null,
@@ -71,11 +72,13 @@ create table planes (
 
 create table tickets (
   id int not null auto_increment,
-  flight_id int not null,
+  flight_to_id int not null,
+  flight_return_id int,
   class_id int not null,
 
   primary key (id),
-  foreign key (flight_id) references flights(id) on delete cascade,
+  foreign key (flight_to_id) references flights(id) on delete cascade,
+  foreign key (flight_return_id) references flights(id) on delete cascade,
   foreign key (class_id) references classes(id) on delete cascade
 )engine=MyISAM;
 

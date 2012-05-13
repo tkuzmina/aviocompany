@@ -22,8 +22,8 @@ class Tickets_model extends CI_Model {
    */
     }
 
-    function create_ticket($flight_id, $class_id) {
-        $this->db->insert('tickets', array("flight_id" => $flight_id, "class_id" => $class_id));
+    function create_ticket($flight_to_id, $flight_return_id, $class_id) {
+        $this->db->insert('tickets', array("flight_to_id" => $flight_to_id, "flight_return_id" => $flight_return_id, "class_id" => $class_id));
         return $this->db->insert_id();
     }
 }

@@ -1,8 +1,51 @@
 </div>
 <div class="footer">
-<p>LIDOTLETI © Copyright 2012. All rights reserved. </p>
+<p>LIDOTLETI ï¿½ Copyright 2012. All rights reserved. </p>
 <p>Contacts: service@lidotleti.lv</p>
+
+<?php if (!$current_user): ?>
+<a data-toggle="modal" href="#login">Admin login</a>
+<?php endif; ?>
+
 </div>
 </div>
+
+<div class="modal" id="login">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
+        <h3>Admin login</h3>
+    </div>
+    <?=form_open('users/login', array("class" => "form-horizontal"))?>
+        <div class="modal-body">
+            <div class="control-group">
+                <label class="control-label" for="login">Login</label>
+                <div class="controls">
+                    <?=form_input('login', set_value('login'))?>
+			    </div>
+			</div>
+            <div class="control-group">
+                <label class="control-label" for="password">Password</label>
+                <div class="controls">
+                    <?=form_password('password')?>
+			    </div>
+			</div>
+            <div class="modal-footer">
+                <a class="btn" id="loginClose">Close</a>
+                <?=form_submit('login_form', 'Login', "class='btn btn-primary'")?>
+            </div>
+    <?=form_close();?>
+       </div>
+</div>
+
+<script type="text/javascript">
+    $(function() {
+        var login = $("#login");
+        login.modal().modal('hide');
+        $("#loginClose").on('click', function() {
+            login.modal('hide');
+        });
+    })
+</script>
+
 </body>
 </html>

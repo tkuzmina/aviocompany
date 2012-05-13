@@ -1,23 +1,60 @@
 <?php include("header.php"); ?>
-<table class="table table-bordered">
-<thead>
+
+<table class="fill">
 <tr>
-  <th>City from</th>
-  <th>City to</th>
-  <th>Datetime from</th>
-  <th>Datetime to</th>
+    <td><h1>Flight to:</h1></td>
+    <?php if ($flight_return): ?><td><h1>Return flight:</h1></td><?php endif; ?>
 </tr>
-</thead>
 <tr>
-    <td><?= $flight->city_from_name ?></td>
-    <td><?= $flight->city_to_name ?></td>
-    <td><?= $flight->date_from ?></td>
-    <td><?= $flight->date_to ?></td>
+    <td>
+        <table class='table table-bordered'>
+            <thead>
+            <tr>
+                <th>City from</th>
+                <th>City to</th>
+                <th>Date</th>
+                <th>Plane model</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tr>
+                <td><?= $flight_to->city_from_name ?></td>
+                <td><?= $flight_to->city_to_name ?></td>
+                <td><?= $flight_to->date_from ?></td>
+                <td><?= $flight_to->plane_model ?></td>
+                <td><?= $flight_to->price ?></td>
+            </tr>
+        </table>
+    </td>
+    <?php if ($flight_return): ?>
+    <td>
+        <table class='table table-bordered'>
+            <thead>
+            <tr>
+                <th>City from</th>
+                <th>City to</th>
+                <th>Date</th>
+                <th>Plane model</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tr>
+                <td><?= $flight_return->city_from_name ?></td>
+                <td><?= $flight_return->city_to_name ?></td>
+                <td><?= $flight_return->date_from ?></td>
+                <td><?= $flight_return->plane_model ?></td>
+                <td><?= $flight_return->price ?></td>
+            </tr>
+        </table>
+    </td>
+    <?php endif; ?>
 </tr>
 </table>
 
 <?=form_open('tickets/add')?>
-<?=form_hidden('flight_id', $flight->id)?>
+<?=form_hidden('class_id', $class_id)?>
+<?=form_hidden('flight_to_id', $flight_to->id)?>
+<?=form_hidden('flight_return_id', $flight_return ? $flight_return->id : NULL)?>
 <div class='Title'><h1>Please add information about passengers</h1></div>
 
 <?php $passenger_no = 1 ?>
@@ -42,7 +79,10 @@
 <?php endforeach ?>
 <?=form_hidden('passenger_count', $passenger_no)?>
 
-<?= form_submit("add", "Buy", "class='btn btn-primary pull-right'") ?>
+<div class="pull-right">
+<a class="btn pad-right" href="/avio/index.php/flight_search">Cancel</a>
+<?= form_submit("add", "Buy", "class='btn btn-primary'") ?>
+</div>
 
  <?=form_close();?>
 

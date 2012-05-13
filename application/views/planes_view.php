@@ -101,16 +101,6 @@
         $("#newPlaneClose").on('click', function() {
             newPlane.modal('hide');
         });
-        $(".edit_data").hide();
-        $(".edit_button").on('click', function() {
-            var id = $(this).attr('id').replace("edit_", "");
-            $(".view_" + id).hide();
-            $(".edit_" + id).show();
-        });
-        $(".cancel_button").on('click', function() {
-            $(".view_data").show();
-            $(".edit_data").hide();
-        });
     })
 </script>
 <?php include("footer.php"); ?>

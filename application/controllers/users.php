@@ -18,6 +18,7 @@ class Users extends CI_Controller {
         if ($user) {
             if ($password == $this->decrypt_password($user->password)) {
                 $this->session->set_userdata('current_user', $user);
+                /* set_userdata sets a value to session */
             } else {
                 $this->session->set_flashdata('message', 'Incorrect password.');
             }
@@ -25,13 +26,13 @@ class Users extends CI_Controller {
             $this->session->set_flashdata('message', 'User does not exist.');
         }
 
-        redirect_back($this->session);
+        redirect("flight_search");
     }
 
     function logout() {
         $this->session->unset_userdata('current_user');
 
-        redirect_back($this->session);
+        redirect("flight_search");
     }
 
     function index() {
@@ -46,42 +47,39 @@ class Users extends CI_Controller {
     function add() {
         $login = $this->input->post('login');
         $password = $this->encrypt_password($this->input->post('password'));
+        $name = $this->input->post('name');
+        $surname = $this->input->post('surname');
         $email = $this->input->post('email');
         $role_id = $this->input->post('role_id');
-        $this->users_model->insert_user($login, $password, $email, $role_id);
+        $this->users_model->insert_user($login, $password, $name, $surname, $email, $role_id);
 
-        redirect_back('users');
+        redirect("users");
     }
 
     function delete() {
         $user_id = $this->input->get('user_id');
         $this->users_model->delete_user($user_id);
 
-        redirect_back($this->session);
+        redirect("users");
     }
 
     function edit() {
         $user_id = $this->input->post('user_id');
+        $name = $this->input->post('name');
+        $surname = $this->input->post('surname');
         $email = $this->input->post('email');
         $role_id = $this->input->post('role_id');
-        $this->users_model->update_user($user_id, $email, $role_id);
+        $this->users_model->update_user($user_id, $name, $surname, $email, $role_id);
 
-        redirect_back('users');
+        redirect("users");
     }
 
-    function register() {
-        $this->load->view('register_view');
+    private function encrypt_password($decrypted_password) {
+        return $this->encrypt->encode($decrypted_password);
     }
 
-    function do_register() {
-        $login = $this->input->post('login');
-        $password = $this->encrypt_password($this->input->post('password'));
-        $email = $this->input->post('email');
-        $role_id = 1; // user
-        $this->users_model->insert_user($login, $password, $email, $role_id);
-
-        $this->session->set_flashdata('message', 'Registration successful!');
-        redirect('users');
+    private function decrypt_password($encrypted_password) {
+        return $this->encrypt->decode($encrypted_password);
     }
 
 }

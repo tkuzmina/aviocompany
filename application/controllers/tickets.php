@@ -13,9 +13,20 @@ class Tickets extends CI_Controller {
     function index() {
         $ticket_id = $this->input->get('ticket_id');
         $ticket = $this->tickets_model->get_ticket($ticket_id);
-        $flight = $this->flights_model->get_flight($ticket->flight_id);
+        if (!$ticket) {
+            $this->session->set_flashdata('message', 'Ticket not found by provided reservation id.');
+            redirect('main');
+            return;
+        }
+
+        $flight_to = $this->flights_model->get_flight($ticket->flight_to_id);
+        $flight_return = $this->flights_model->get_flight($ticket->flight_return_id);
         $passengers = $this->passengers_model->get_passengers($ticket_id);
-        $data['flight'] = $flight;
+        $this->flights_model->count_flight_price_by_ticket($ticket, $passengers, $flight_to);
+        $this->flights_model->count_flight_price_by_ticket($ticket, $passengers, $flight_return);
+        $data['ticket'] = $ticket;
+        $data['flight_to'] = $flight_to;
+        $data['flight_return'] = $flight_return;
         $data['passengers'] = $passengers;
         $this->load->view('ticket_view', $data);
     }
@@ -23,10 +34,15 @@ class Tickets extends CI_Controller {
     function buy() {
         $search_params = $this->session->userdata('search_params');
         $classes = $this->classes_model->get_class_map();
-        $flight_id = $this->input->get('flight_id');
-        $flight = $this->flights_model->get_flight($flight_id);
+        $flight_to_id = $this->input->get('flight_to_id');
+        $flight_return_id = $this->input->get('flight_return_id');
+        $flight_to = $this->flights_model->get_flight($flight_to_id);
+        $this->flights_model->count_flight_price_by_params($search_params, $flight_to);
+        $flight_return = $this->flights_model->get_flight($flight_return_id);
+        $this->flights_model->count_flight_price_by_params($search_params, $flight_return);
         $data['classes'] = $classes;
-        $data['flight'] = $flight;
+        $data['flight_to'] = $flight_to;
+        $data['flight_return'] = $flight_return;
         $data['class_id'] = get_value('class_id', $search_params);
         $data['types'] = $this->get_types($search_params);
         $data['type_list'] = $this->passenger_types_model->get_types_map();
@@ -48,8 +64,10 @@ class Tickets extends CI_Controller {
     }
 
     function add() {
-        $flight_id = $this->input->post('flight_id');
-        $ticket_id = $this->tickets_model->create_ticket($flight_id, 1);
+        $flight_to_id = $this->input->post('flight_to_id');
+        $flight_return_id = $this->input->post('flight_return_id');
+        $class_id = $this->input->post('class_id');
+        $ticket_id = $this->tickets_model->create_ticket($flight_to_id, $flight_return_id, $class_id);
         for ($i = 1; $i < $this->input->post('passenger_count'); $i++) {
             $this->add_passenger($ticket_id, $i);
         }

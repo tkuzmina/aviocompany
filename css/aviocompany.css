@@ -104,10 +104,10 @@ table thead{
 .searchTable tr td {
     padding-right: 11px;
 }
-.searchTable strong{
+.searchTable strong {
     font:bold 16px Arial;
 }
-.title{
+.title {
     border-bottom: 1px solid #D8D8D8;
     border-top: 1px solid #D8D8D8;
     color: #000000;
@@ -122,9 +122,7 @@ table thead{
 .table thead tr td{
     font-weight:bold;
 }
-.btn-primary{
-    margin-bottom:8px;
-}
+
 .fill {
     width: 100%;
 }
@@ -139,4 +137,8 @@ table thead{
     border-top:1px dotted black;
     text-align:center;
     color: #81C1C6;
+}
+
+.pad-right {
+    padding-right: 5px;
 }

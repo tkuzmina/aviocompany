@@ -1,26 +1,64 @@
 <?php include("header.php"); ?>
-<h1>Thank you for choosing our flight reservation system!</h1>
+<div class="alert alert-success">Thank you for choosing our aviocompany!</div>
 <table class="table table-bordered">
 <thead>
-<h2>Information about flight:</h2>
+<h1>Information about flight:</h1>
+<h2>Reservation number: <strong><?=$ticket->id?></strong></h2>
+
+<table class="fill">
 <tr>
-  <th>City from </th>
-  <th>City to</th>
-  <th>Datetime from</th>
-  <th>Datetime to</th>
+    <td><h2>Flight to:</h2></td>
+    <?php if ($flight_return): ?><td><h2>Return flight:</h2></td><?php endif; ?>
 </tr>
-</thead>
 <tr>
-    <td><?= $flight->city_from_name ?></td>
-    <td><?= $flight->city_to_name ?></td>
-    <td><?= $flight->date_from ?></td>
-    <td><?= $flight->date_to ?></td>
+    <td>
+        <table class='table table-bordered'>
+            <thead>
+            <tr>
+                <th>City from</th>
+                <th>City to</th>
+                <th>Date</th>
+                <th>Plane model</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tr>
+                <td><?= $flight_to->city_from_name ?></td>
+                <td><?= $flight_to->city_to_name ?></td>
+                <td><?= $flight_to->date_from ?></td>
+                <td><?= $flight_to->plane_model ?></td>
+                <td><?= $flight_to->price ?></td>
+            </tr>
+        </table>
+    </td>
+    <?php if ($flight_return): ?>
+    <td>
+        <table class='table table-bordered'>
+            <thead>
+            <tr>
+                <th>City from</th>
+                <th>City to</th>
+                <th>Date</th>
+                <th>Plane model</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tr>
+                <td><?= $flight_return->city_from_name ?></td>
+                <td><?= $flight_return->city_to_name ?></td>
+                <td><?= $flight_return->date_from ?></td>
+                <td><?= $flight_return->plane_model ?></td>
+                <td><?= $flight_return->price ?></td>
+            </tr>
+        </table>
+    </td>
+    <?php endif; ?>
 </tr>
 </table>
 
 <table class="table table-bordered">
 <thead>
-<h2>Information about passanger(s):</h2>
+<h2>Information about passenger(s):</h2>
 <tr>
   <th>Name</th>
   <th>Surname</th>
