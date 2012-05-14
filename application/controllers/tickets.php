@@ -31,6 +31,25 @@ class Tickets extends CI_Controller {
         $this->load->view('ticket_view', $data);
     }
 
+    function print_ticket() {
+        $ticket_id = $this->input->get('ticket_id');
+        $ticket = $this->tickets_model->get_ticket($ticket_id);
+        if (!$ticket) {
+            $this->session->set_flashdata('message', 'Ticket not found by provided reservation id.');
+            redirect('main');
+            return;
+        }
+
+        $flight_to = $this->flights_model->get_flight($ticket->flight_to_id);
+        $flight_return = $this->flights_model->get_flight($ticket->flight_return_id);
+        $passengers = $this->passengers_model->get_passengers($ticket_id);
+        $data['ticket'] = $ticket;
+        $data['flight_to'] = $flight_to;
+        $data['flight_return'] = $flight_return;
+        $data['passengers'] = $passengers;
+        $this->load->view('print_ticket_view', $data);
+    }
+
     function buy() {
         $search_params = $this->session->userdata('search_params');
         $classes = $this->classes_model->get_class_map();

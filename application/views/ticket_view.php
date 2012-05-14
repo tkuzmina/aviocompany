@@ -80,4 +80,15 @@
 <?php endforeach ?>
 </table>
 
+<button class="btn btn-primary" id="printTickets" value=<?="tickets/print_ticket?ticket_id=".$ticket->id?>>Print tickets</button>
+
+<script>
+    $(function() {
+        $("#printTickets").on('click', function() {
+            var url = $("#printTickets").val();
+            window.open(url, "", "");
+        });
+    });
+</script>
+
 <?php include("footer.php"); ?>
