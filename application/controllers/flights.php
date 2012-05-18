@@ -36,7 +36,8 @@ class Flights extends CI_Controller {
 		$price_e_infant = $this->input->post('price_e_infant');
 		$price_b_infant = $this->input->post('price_b_infant');
         $this->flights_model->insert_flight($city_from_id, $city_to_id, $date_from, $time_from, $duration, $plane_id, $price_economy, $price_business, $price_e_child, $price_b_child, $price_e_infant, $price_b_infant);
-        redirect("flights");
+        $this->session->set_flashdata('message', 'Flight was added successfully!');
+		redirect("flights");
     }
 	
     function edit() {
@@ -54,13 +55,15 @@ class Flights extends CI_Controller {
 		$price_e_infant = $this->input->post('price_e_infant');
 		$price_b_infant = $this->input->post('price_b_infant');
         $this->flights_model->update_flight($flight_id, $city_from_id, $city_to_id, $date_from, $time_from, $duration, $plane_id, $price_economy, $price_business, $price_e_child, $price_b_child, $price_e_infant, $price_b_infant);
-        redirect("flights");
+        $this->session->set_flashdata('message', 'Flight is eddited successfully!');
+		redirect("flights");
     }
 
     function delete() {
         $flight_id = $this->input->get('flight_id');
         $this->flights_model->delete_flight($flight_id);
-        redirect("flights");
+        $this->session->set_flashdata('message', 'Flight is deleted successfully!');
+	    redirect("flights");
     }
 
 

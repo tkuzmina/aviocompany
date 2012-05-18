@@ -23,13 +23,15 @@ class Planes extends CI_Controller {
 		$seats_business = $this->input->post('seats_business');
 		$luggage_count = $this->input->post('luggage_count');
         $this->planes_model->insert_plane($model,$seats_economy,$seats_business,$luggage_count);
+		$this->session->set_flashdata('message', 'Plane was added successfully!');
         redirect("planes");
     }
 
     function delete() {
         $plane_id = $this->input->get('plane_id');
         $this->planes_model->delete_plane($plane_id);
-          redirect("planes");
+		$this->session->set_flashdata('message', 'Plane is deleted successfully!');
+        redirect("planes");
     }
 
     function edit() {
@@ -39,6 +41,7 @@ class Planes extends CI_Controller {
 		$seats_business = $this->input->post('seats_business');
 		$luggage_count = $this->input->post('luggage_count');
         $this->planes_model->update_plane($plane_id,$model,$seats_economy,$seats_business,$luggage_count);
+		$this->session->set_flashdata('message', 'Plane is eddited successfully!');
         redirect("planes");
     }
 }

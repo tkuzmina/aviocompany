@@ -1497,7 +1497,7 @@ table {
 }
 
 .table {
-  width: auto;
+  width: 100%;
   margin-bottom: 18px;
 }
 

@@ -18,6 +18,7 @@
                 <th>City from</th>
                 <th>City to</th>
                 <th>Date</th>
+				<th>Time of departure</th>
                 <th>Plane model</th>
                 <th>Price</th>
             </tr>
@@ -26,6 +27,7 @@
                 <td><?= $flight_to->city_from_name ?></td>
                 <td><?= $flight_to->city_to_name ?></td>
                 <td><?= $flight_to->date_from ?></td>
+				<td><?= $flight_to->time_from ?></td>
                 <td><?= $flight_to->plane_model ?></td>
                 <td><?= $flight_to->price ?></td>
             </tr>
@@ -39,6 +41,7 @@
                 <th>City from</th>
                 <th>City to</th>
                 <th>Date</th>
+				<th>Time of departure</th>
                 <th>Plane model</th>
                 <th>Price</th>
             </tr>
@@ -47,6 +50,7 @@
                 <td><?= $flight_return->city_from_name ?></td>
                 <td><?= $flight_return->city_to_name ?></td>
                 <td><?= $flight_return->date_from ?></td>
+				<td><?= $flight_return->time_from ?></td>
                 <td><?= $flight_return->plane_model ?></td>
                 <td><?= $flight_return->price ?></td>
             </tr>
@@ -80,8 +84,8 @@
 <?php endforeach ?>
 </table>
 
-<button class="btn btn-primary" id="printTickets" value=<?="tickets/print_ticket?ticket_id=".$ticket->id?>>Print tickets</button>
-
+<button class="btn btn-primary" id="printTickets" value=<?="tickets/print_ticket?ticket_id=".$ticket->id?>>View tickets</button>
+<div class="pull-right"><a class="btn btn-primary pad-right" href="/aviocompany/index.php/main">Go to the main page</a></div>
 <script>
     $(function() {
         $("#printTickets").on('click', function() {

@@ -20,7 +20,7 @@ class Users extends CI_Controller {
                 $this->session->set_userdata('current_user', $user);
                 /* set_userdata sets a value to session */
             } else {
-                $this->session->set_flashdata('message', 'Incorrect password.');
+                $this->session->set_flashdata('message', 'Incorrect password and/or login.');
             }
         } else {
             $this->session->set_flashdata('message', 'User does not exist.');
@@ -32,7 +32,7 @@ class Users extends CI_Controller {
     function logout() {
         $this->session->unset_userdata('current_user');
 
-        redirect("flight_search");
+        redirect("main");
     }
 
     function index() {
@@ -52,14 +52,14 @@ class Users extends CI_Controller {
         $email = $this->input->post('email');
         $role_id = $this->input->post('role_id');
         $this->users_model->insert_user($login, $password, $name, $surname, $email, $role_id);
-
+        $this->session->set_flashdata('message', 'User was added successfully!');
         redirect("users");
     }
 
     function delete() {
         $user_id = $this->input->get('user_id');
         $this->users_model->delete_user($user_id);
-
+        $this->session->set_flashdata('message', 'User is deleted successfully!');
         redirect("users");
     }
 
@@ -70,7 +70,7 @@ class Users extends CI_Controller {
         $email = $this->input->post('email');
         $role_id = $this->input->post('role_id');
         $this->users_model->update_user($user_id, $name, $surname, $email, $role_id);
-
+        $this->session->set_flashdata('message', 'User is eddited successfully!');  
         redirect("users");
     }
 

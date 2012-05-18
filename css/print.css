@@ -1,3 +1,13 @@
+@media print{
+  #heading{ display:none; }
+}
+
+
+.all_tickets{
+    border-radius: 5px 5px 5px 5px;
+    margin: 0 auto;
+    width: 800px;
+}
 .ticket_container {
     width: 800px;
     margin: 10px;

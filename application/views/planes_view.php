@@ -9,7 +9,7 @@
 <h2>Existing planes</h2>
     <thead>
         <tr>
-            <td width='100px'>Model:</td>
+            <td>Model:</td>
             <td>Seats ecoonomy:</td>
             <td>Seats business:</td>
             <td>Luggage count:</td>
@@ -26,19 +26,19 @@
     <tr>
         <td>
             <div class='view_data <?=$view_id?>'><?=$plane->model?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_input('model', $plane->model)?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_input('model', $plane->model,"class='span2'")?></div>
         </td>
         <td>
             <div class='view_data <?=$view_id?>'><?=$plane->seats_economy?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_input('seats_economy', $plane->seats_economy)?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_input('seats_economy', $plane->seats_economy,"class='span2'")?></div>
         </td>
         <td>
             <div class='view_data <?=$view_id?>'><?=$plane->seats_business?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_input('seats_business', $plane->seats_business)?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_input('seats_business', $plane->seats_business,"class='span2'")?></div>
         </td>
         <td>
             <div class='view_data <?=$view_id?>'><?=$plane->luggage_count?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_input('luggage_count', $plane->luggage_count)?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_input('luggage_count', $plane->luggage_count,"class='span2'")?></div>
         </td>
         <td>
             <span class='edit_data <?=$edit_id?>'>
@@ -46,8 +46,8 @@
                 <a class="cancel_button"><i class="icon-remove"></i></a>
             </span>
             <span class='view_data <?=$view_id?>'>
-                <a class="edit_button" id=<?="'edit_".$plane->id."'" ?>><i class="icon-edit"></i></a>
-                <a href='<?='planes/delete?plane_id='.$plane->id?>'><i class="icon-trash"></i></a>
+                <a class="edit_button" id=<?="'edit_".$plane->id."'" ?>><i class="icon-edit" title="edit"></i></a>
+                <a href='<?='planes/delete?plane_id='.$plane->id?>'><i class="icon-trash" title="delete"></i></a>
             </span>
         </td>
     </tr>
@@ -59,7 +59,7 @@
 <div class="modal" id="newPlane">
     <div class="modal-header">
         <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
-        <h3>Add new plane</h3>
+        <h2>Add new plane</h2>
     </div>
     <?=form_open('planes/add', array("class" => "form-horizontal"))?>
     <div class="modal-body">
@@ -101,6 +101,13 @@
         $("#newPlaneClose").on('click', function() {
             newPlane.modal('hide');
         });
-    })
+		var menuItems = $(".menuItem");
+        if (menuItems) {
+        menuItems.removeClass("active");
+        $(".menuItem#planes").addClass("active");
+        }
+	});
+
+</script>
 </script>
 <?php include("footer.php"); ?>

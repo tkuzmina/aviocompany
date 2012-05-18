@@ -20,12 +20,14 @@ class Cities extends CI_Controller {
 	function add() {
         $name = $this->input->post('name');
         $this->cities_model->insert_city($name);
+		$this->session->set_flashdata('message', 'City was added successfully!');
         redirect("cities");
     }
 
     function delete() {
         $city_id = $this->input->get('city_id');
         $this->cities_model->delete_city($city_id);
+		$this->session->set_flashdata('message', 'City is deleted successfully!');
         redirect("cities");
     }
 
@@ -33,6 +35,7 @@ class Cities extends CI_Controller {
         $city_id = $this->input->post('city_id');
         $name = $this->input->post('name');
         $this->cities_model->update_city($city_id,$name);
+		$this->session->set_flashdata('message', 'City is eddited successfully!');
         redirect("cities");
     }
 

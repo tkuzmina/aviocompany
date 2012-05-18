@@ -31,11 +31,68 @@ table{
 	border-radius:5px;
 	min-height:488px;
 }
+.container .pull-right li a:hover{
+    color:#81C1C6;
+}
+.navbar .nav li.active a {
+    color:white;
+	text-decoration:underline;
+}
+.search_flight{	
+	width:475px;
+}
+.img{
+    margin-left: -71px;
+    margin-top: -9px;}
+.container .pull-right .logout:hover{
+    text-decoration:underline;
+	color:white;
+}
 .main{	
     background-color:white;
 	min-height:488px;
 	padding:15px;
-	border-radius:0 0 5px 5px;
+	border-radius:8px;
+}
+.main .find_reserv{
+    float: right;
+    margin-top: -33px;
+}
+.main .find_reserv input{
+    margin-bottom:0px;}
+.main .banner{
+    float:right;
+	cursor:pointer;
+	}
+.news_info{
+    margin-bottom:10px;
+    border:3px solid #C7DDEE;
+    border-radius:8px;
+	
+}
+.newsTable .edit_data textarea{
+    width:605px;
+}
+.main .news_main{
+    height:18px;
+	background-color:#C7DDEE;
+	padding:10px;
+}
+.main .news_name{
+    color:#1B5675;
+	text-transform:uppercase;
+	font-weight:bold;}
+.main .news_date{
+    float:right;
+	color:#1B5675;
+	text-decoration:underline;
+	margin-top:-19px;
+}
+.main .news_date strong{
+    color:#1B5675;
+}
+.main .news_text{
+    padding:10px;
 }
 .header{
     position:relative;
@@ -48,7 +105,8 @@ table{
     cursor:pointer;
 }
 .logo img{
-    padding-top:53px;
+    padding-top:11px;
+	padding-left:8px;	
 }
 .phone{
     color: #FFFFFF;
@@ -60,13 +118,13 @@ table{
     text-decoration: none;
     text-transform: none;
 	float:right;
-	margin-top:-88px;
+	margin-top:76px;
 }
 .navbar{
     margin-bottom:0px;
 }
 .navbar-inner{
-    border-radius:5px 5px 0 0;
+    border-radius:8px;
 }
 span.number {
     color: #FFFFFF;
@@ -81,7 +139,7 @@ table thead{
 }
 .searchTable{
     border:3px solid #C7DDEE;
-    border-radius:5px;
+    border-radius:20px;
     padding:15px;
 }
 .flightsTable thead tr th {
@@ -127,6 +185,10 @@ table thead{
     width: 100%;
 }
 
+.citiesTable{
+width:auto;
+}
+
 .passengerFormLabel {
     text-align: right;
     padding-left: 15px;
@@ -137,6 +199,13 @@ table thead{
     border-top:1px dotted black;
     text-align:center;
     color: #81C1C6;
+}
+.footer .login{
+    text-decoration:underline;
+}
+.footer .login:hover{
+   color:white;
+   font-weight:bold;
 }
 
 .pad-right {

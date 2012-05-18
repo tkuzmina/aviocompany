@@ -3,8 +3,8 @@
 
 <a class="btn btn-primary" data-toggle="modal" href="#newUser" >Add new user</a>
 
-<table class="table">
-
+<table class="table table-bordered usersTable">
+<h2>Existing users</h2>
 <thead>    
 <tr>
     <th>Login</th>
@@ -29,15 +29,15 @@
         </td>
         <td>
             <div class='view_data <?=$view_id?>'><?=$user->name?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_input('name', $user->name)?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_input('name', $user->name,"class='span2'")?></div>
         </td>
         <td>
             <div class='view_data <?=$view_id?>'><?=$user->surname?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_input('surname', $user->surname)?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_input('surname', $user->surname,"class='span2'")?></div>
         </td>
         <td>
             <div class='view_data <?=$view_id?>'><?=$user->email?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_input('email', $user->email)?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_input('email', $user->email,"class='span2'")?></div>
         </td>
         <td>
             <div class='view_data <?=$view_id?>'><?=$roles[$user->role_id]?></div>
@@ -49,8 +49,8 @@
                 <a class="cancel_button"><i class="icon-remove"></i></a>
             </span>
             <span class='view_data <?=$view_id?>'>
-                <a class="edit_button" id=<?="'edit_".$user->id."'" ?>><i class="icon-edit"></i></a>
-                <a href='<?='users/delete?user_id='.$user->id?>'><i class="icon-trash"></i></a>
+                <a class="edit_button" id=<?="'edit_".$user->id."'" ?>><i class="icon-edit" title="edit"></i></a>
+                <a href='<?='users/delete?user_id='.$user->id?>'><i class="icon-trash" title="delete"></i></a>
             </span>
         </td>
     </tr>
@@ -61,7 +61,7 @@
 <div class="modal" id="newUser">
     <div class="modal-header">
         <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
-        <h3>Add new plane</h3>
+        <h2>Add new user</h2>
     </div>
     <?=form_open('users/add', array("class" => "form-horizontal"))?>
     <div class="modal-body">
@@ -116,6 +116,11 @@
         $("#newUserClose").on('click', function() {
             newUser.modal('hide');
         });
+		var menuItems = $(".menuItem");
+        if (menuItems) {
+        menuItems.removeClass("active");
+        $(".menuItem#users").addClass("active");
+        }
     })
 </script>
 

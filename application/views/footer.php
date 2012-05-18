@@ -1,10 +1,10 @@
 </div>
 <div class="footer">
-<p>LIDOTLETI � Copyright 2012. All rights reserved. </p>
-<p>Contacts: service@lidotleti.lv</p>
+<p>AVIO.LV &copy; Copyright 2012. All rights reserved. </p>
+<p>Contacts: service@avio.lv</p>
 
 <?php if (!$current_user): ?>
-<a data-toggle="modal" href="#login">Admin login</a>
+<a data-toggle="modal" href="#login" class="login">Admin login</a>
 <?php endif; ?>
 
 </div>
@@ -13,7 +13,7 @@
 <div class="modal" id="login">
     <div class="modal-header">
         <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
-        <h3>Admin login</h3>
+        <h2>Admin login</h2>
     </div>
     <?=form_open('users/login', array("class" => "form-horizontal"))?>
         <div class="modal-body">

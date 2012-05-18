@@ -2,12 +2,13 @@
 <html>
 <head>
 
-    <link href="/avio/css/print.css" rel="stylesheet" type="text/css"/>
-    <link href="/avio/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="/aviocompany/css/print.css" rel="stylesheet" type="text/css" />
+    <link href="/aviocompany/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
-
+<div class="print">
+<div class="all_tickets">
 <?php
     $flights = array($flight_to);
     if ($flight_return) {
@@ -55,6 +56,10 @@
 
 <?php endforeach ?>
 <?php endforeach ?>
-
+<form><input type="button" value=" Print this page "
+onclick="window.print();" /></form> 
+<script src="http://cdn.printfriendly.com/printfriendly.js" type="text/javascript"></script><a href="http://www.printfriendly.com" style=" color:#6D9F00; text-decoration:none;" class="printfriendly" onclick="window.print(); return false;" title="Printer Friendly and PDF"><img style="border:none;" src="http://cdn.printfriendly.com/pf_button_sq_gry_m.png" alt="Print Friendly and PDF"/></a>
+</div>
+</div>
 </body>
 </html>

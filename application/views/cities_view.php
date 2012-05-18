@@ -20,7 +20,7 @@
     <tr>
         <td>
             <div class='view_data <?=$view_id?>'><?=$city->name?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_input('name', $city->name)?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_input('name', $city->name,"class='span2'")?></div>
         </td>
         <td>
             <span class='edit_data <?=$edit_id?>'>
@@ -28,8 +28,8 @@
                 <a class="cancel_button"><i class="icon-remove"></i></a>
             </span>
             <span class='view_data <?=$view_id?>'>
-                <a class="edit_button" id=<?="'edit_".$city->id."'" ?>><i class="icon-edit"></i></a>
-                <a href='<?='cities/delete?city_id='.$city->id?>'><i class="icon-trash"></i></a>
+                <a class="edit_button" id=<?="'edit_".$city->id."'" ?>><i class="icon-edit" title="edit"></i></a>
+                <a href='<?='cities/delete?city_id='.$city->id?>'><i class="icon-trash" title="delete"></i></a>
             </span>
         </td>
     </tr>
@@ -41,7 +41,7 @@
 <div class="modal" id="newCity">
     <div class="modal-header">
         <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
-        <h3>Add new city</h3>
+        <h2>Add new city</h2>
     </div>
     <?=form_open('cities/add', array("class" => "form-horizontal"))?>
         <div class="modal-body">
@@ -66,6 +66,11 @@
         $("#newCityClose").on('click', function() {
             newCity.modal('hide');
         });
+		var menuItems = $(".menuItem");
+        if (menuItems) {
+        menuItems.removeClass("active");
+        $(".menuItem#cities").addClass("active");
+        }
     })
 </script>
 <?php include("footer.php"); ?>
