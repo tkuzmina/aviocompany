@@ -8,7 +8,6 @@ drop table if exists classes;
 drop table if exists passenger_types;
 drop table if exists passengers;
 drop table if exists news;
-drop table if exists comments;
 drop table if exists questions;
 
 create table roles (
@@ -128,20 +127,8 @@ create table news (
   primary key (id),
   foreign key (user_id) references users(id) on delete cascade
 )engine=MyISAM;
-  
-create table comments (
-  id int not null auto_increment,
-  news_id int not null,
-  text text not null,
-  user_id int not null,
-  created_date datetime not null,
-  
-  primary key (id),
-  foreign key (user_id) references users(id) on delete cascade,
-  foreign key (news_id) references news(id) on delete cascade 
-)engine=MyISAM;
 
-create table questions{
+create table questions(
   id int not null auto_increment,
   name char(255) not null,
   surname char(255) not null,
@@ -149,4 +136,4 @@ create table questions{
   email char(255),
   
   primary key (id)
-}engine=MyISAM;
+)engine=MyISAM;
