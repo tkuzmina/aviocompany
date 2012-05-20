@@ -1,5 +1,7 @@
 <?php include("header.php"); ?>
 
+<?php if (validation_errors()): ?><div class="alert alert-error"><?= validation_errors(); ?></div><?php endif; ?>
+
 <table class="fill">
 <tr>
     <td><h1>Flight to:</h1></td>
@@ -68,14 +70,14 @@
     <h2>Passenger <?= $passenger_no ?> (<?= $type_list[$type] ?>)</h2>
     <table class="registerFormContent">
         <tr>
-            <td class="passengerFormLabel">Name:</td><td><?=form_input('name'.$passenger_no, '')?></td>
-            <td class="passengerFormLabel">Surname:</td><td><?=form_input('surname'.$passenger_no, '')?></td>
-            <td class="passengerFormLabel">Luggage count:</td><td><?=form_input('luggage_count'.$passenger_no, '')?></td>
+            <fieldset class="control-group error"><td class="passengerFormLabel">Name:</td><td><?=form_input('name'.$passenger_no, set_value('name'.$passenger_no), validation_class("name".$passenger_no))?></td></fieldset>
+            <td class="passengerFormLabel">Surname:</td><td><?=form_input('surname'.$passenger_no, set_value('surname'.$passenger_no), validation_class("surname".$passenger_no))?></td>
+            <td class="passengerFormLabel">Luggage count:</td><td><?=form_input('luggage_count'.$passenger_no, set_value('luggage_count'.$passenger_no), validation_class("luggage_count".$passenger_no))?></td>
         </tr>
         <tr>
-            <td class="passengerFormLabel">Passport number:</td><td><?=form_input('passport_number'.$passenger_no, '')?></td>
-            <td class="passengerFormLabel">Date of issue:</td><td><?=form_input('issue_date'.$passenger_no, '', "class='datepicker'")?></td>
-            <td class="passengerFormLabel">Date of expiration:</td><td><?=form_input('expiration_date'.$passenger_no, '', "class='datepicker'")?></td>
+            <td class="passengerFormLabel">Passport number:</td><td><?=form_input('passport_number'.$passenger_no, set_value('passport_number'.$passenger_no), validation_class("passport_number".$passenger_no))?></td>
+            <td class="passengerFormLabel">Date of issue:</td><td><?=form_input('issue_date'.$passenger_no, set_value('issue_date'.$passenger_no), validation_class("issue_date".$passenger_no, "datepicker"))?></td>
+            <td class="passengerFormLabel">Date of expiration:</td><td><?=form_input('expiration_date'.$passenger_no, set_value('expiration_date'.$passenger_no), validation_class("expiration_date".$passenger_no, "datepicker"))?></td>
         </tr>
     </table>
 
@@ -84,7 +86,7 @@
 <?=form_hidden('passenger_count', $passenger_no)?>
 
 <div class="pull-right">
-<a class="btn pad-right" href="/avio/index.php/flight_search">Cancel</a>
+<a class="btn pad-right" href='<?=avio_url("flight_search")?>'>Cancel</a>
 <?= form_submit("add", "Buy", "class='btn btn-primary'") ?>
 </div>
 

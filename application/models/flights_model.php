@@ -2,7 +2,8 @@
 
 class Flights_model extends CI_Model {
 
-    private $FLIGHT_SQL = "select f.*, c_to.name as city_to_name, c_from.name as city_from_name, p.model as plane_model
+    private $FLIGHT_SQL = "select f.*, c_to.name as city_to_name, c_from.name as city_from_name,
+            p.model as plane_model, p.seats_economy as seats_economy, p.seats_business as seats_business
         from flights f, cities c_to, cities c_from, planes p
         where f.city_from_id = c_from.id and f.city_to_id = c_to.id and f.plane_id = p.id";
 
@@ -89,6 +90,7 @@ class Flights_model extends CI_Model {
         $sql = $sql." and f.city_from_id=".($direction ? $search_params['city_from_id'] : $search_params['city_to_id']);
         $sql = $sql." and f.city_to_id=".($direction ? $search_params['city_to_id'] : $search_params['city_from_id']);
         $sql = $sql." and f.date_from='".($direction ? $search_params['date_to'] : $search_params['date_return'])."'";
+        $sql = $sql." and f.date_from > '".date("Y-m-d")."'";
         return $sql;
     }
 
@@ -97,7 +99,7 @@ class Flights_model extends CI_Model {
     }
   
     function get_flights() {
-        $query = $this->db->query("select * from flights");
+        $query = $this->db->query($this->FLIGHT_SQL);
         $flights = $query->result();
         $this->count_free_spaces($flights);
         return $flights;
@@ -135,6 +137,7 @@ class Flights_model extends CI_Model {
         if (count($result) == 0){
             return NULL;
         } else {
+            $this->count_free_spaces($result);
             return $result[0];
         }
     }

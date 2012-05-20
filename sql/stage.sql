@@ -131,9 +131,9 @@ create table news (
 create table questions(
   id int not null auto_increment,
   name char(255) not null,
-  surname char(255) not null,
   text text not null,
   email char(255),
-  
+  created_date datetime not null,
+
   primary key (id)
 )engine=MyISAM;

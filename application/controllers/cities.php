@@ -4,11 +4,13 @@ class Cities extends CI_Controller {
     function Cities() {
         parent::__construct();
 
-        $this->load->library(array('encrypt', 'form_validation', 'session'));
-		$this->load->helper(array('form', 'url', 'html'));
+        $this->load->library(array('encrypt', 'form_validation', 'session', 'lang'));
+		$this->load->helper(array('form', 'url', 'html', 'avio'));
 	    $this->load->model(array('cities_model'));
 
+        init_avio_page($this->session, $this->lang);
 	}
+
     function index() {
         $cities = $this->cities_model->get_cities();
         $city_list = $this->cities_model->get_city_list();
@@ -35,7 +37,7 @@ class Cities extends CI_Controller {
         $city_id = $this->input->post('city_id');
         $name = $this->input->post('name');
         $this->cities_model->update_city($city_id,$name);
-		$this->session->set_flashdata('message', 'City is eddited successfully!');
+		$this->session->set_flashdata('info', 'City is eited successfully!');
         redirect("cities");
     }
 

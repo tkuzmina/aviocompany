@@ -12,7 +12,7 @@
         <th rowspan="2">Date from</th>
 		<th rowspan="2">Time of departure</th>
         <th rowspan="2">Plane model</th>
-        <th colspan="2">Free</th>
+        <th colspan="2">Seats free</th>
         <th rowspan="2"></th>
         <th colspan="3">Prices</th>
         <th rowspan="2"></th>
@@ -53,8 +53,8 @@
             <div class='view_data <?=$view_id?>'><?=$plane_list[$flight->plane_id]?></div>
             <div class='edit_data <?=$edit_id?>'><?=form_dropdown('plane_id', $plane_list, $flight->plane_id, "class='span2'")?></div>
         </td>
-        <td rowspan="2"><?= $flight->free_economy ?></td>
-        <td rowspan="2"><?= $flight->free_business ?></td>
+        <td rowspan="2"><?= $flight->free_economy ?> / <?= $flight->seats_economy ?></td>
+        <td rowspan="2"><?= $flight->free_business ?> / <?= $flight->seats_business ?></td>
         <td>E</td>
         <td>
             <div class='view_data <?=$view_id?>'><?=$flight->price_economy?></div>
@@ -74,8 +74,9 @@
                 <a class="cancel_button"><i class="icon-remove"></i></a>
             </span>
             <span class='view_data <?=$view_id?>'>
+                <a href='<?=avio_url('tickets/view?flight_id='.$flight->id)?>'><i class="icon-eye-open" title="view reservations"></i></a>
                 <a class="edit_button" id=<?="'edit_".$flight->id."'" ?>><i class="icon-edit" title="edit"></i></a>
-                <a href='<?='flights/delete?flight_id='.$flight->id?>'><i class="icon-trash" title="delete"></i></a>
+                <a href='<?=avio_url('flights/delete?flight_id='.$flight->id)?>'><i class="icon-trash" title="delete"></i></a>
             </span>
         </td>
     </tr>

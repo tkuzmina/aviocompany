@@ -85,7 +85,7 @@
 </table>
 
 <button class="btn btn-primary" id="printTickets" value=<?="tickets/print_ticket?ticket_id=".$ticket->id?>>View tickets</button>
-<div class="pull-right"><a class="btn btn-primary pad-right" href="/aviocompany/index.php/main">Go to the main page</a></div>
+<div class="pull-right"><a class="btn btn-primary pad-right" href='<?=avio_url("main")?>'>Go to the main page</a></div>
 <script>
     $(function() {
         $("#printTickets").on('click', function() {

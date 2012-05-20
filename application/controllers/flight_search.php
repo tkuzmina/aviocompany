@@ -5,9 +5,11 @@ class Flight_search extends CI_Controller {
     function Flight_search() {
         parent::__construct();
 
-        $this->load->library(array('encrypt', 'form_validation', 'session'));
+        $this->load->library(array('encrypt', 'form_validation', 'session', 'lang'));
         $this->load->helper(array('form', 'url', 'html', 'avio'));
         $this->load->model(array('flights_model', 'cities_model', 'planes_model', 'classes_model'));
+
+        init_avio_page($this->session, $this->lang);
     }
 
     function index() {

@@ -4,11 +4,13 @@ class Planes extends CI_Controller {
     function Planes() {
         parent::__construct();
 
-        $this->load->library(array('encrypt', 'form_validation', 'session'));
-		$this->load->helper(array('form', 'url', 'html'));
+        $this->load->library(array('encrypt', 'form_validation', 'session', 'lang'));
+		$this->load->helper(array('form', 'url', 'html', 'avio'));
 	    $this->load->model(array('planes_model'));
 
+        init_avio_page($this->session, $this->lang);
 	}
+
     function index() {
         $planes = $this->planes_model->get_planes();
 		$plane_list = $this->planes_model->get_plane_list();

@@ -5,9 +5,11 @@ class Users extends CI_Controller {
     function Users() {
         parent::__construct();
 
-        $this->load->library(array('encrypt', 'form_validation', 'session'));
-        $this->load->helper(array('form', 'url', 'html'));
+        $this->load->library(array('encrypt', 'form_validation', 'session', 'lang'));
+        $this->load->helper(array('form', 'url', 'html', 'avio'));
         $this->load->model(array('users_model', 'roles_model'));
+
+        init_avio_page($this->session, $this->lang);
     }
 
     function login() {
@@ -26,7 +28,7 @@ class Users extends CI_Controller {
             $this->session->set_flashdata('message', 'User does not exist.');
         }
 
-        redirect("flight_search");
+        redirect("main");
     }
 
     function logout() {

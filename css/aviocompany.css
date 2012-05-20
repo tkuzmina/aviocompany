@@ -211,3 +211,11 @@ width:auto;
 .pad-right {
     padding-right: 5px;
 }
+
+.validation {
+    background-color:#EED3D7;
+/*
+    border-color:red;
+    border-width:1px;
+*/
+}

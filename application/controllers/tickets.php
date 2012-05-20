@@ -5,9 +5,11 @@ class Tickets extends CI_Controller {
     function Tickets() {
         parent::__construct();
 
-        $this->load->library(array('encrypt', 'form_validation', 'session'));
+        $this->load->library(array('encrypt', 'form_validation', 'session', 'lang'));
         $this->load->helper(array('form', 'url', 'html', 'avio'));
         $this->load->model(array('tickets_model', 'classes_model', 'flights_model', 'passengers_model', 'passenger_types_model'));
+
+        init_avio_page($this->session, $this->lang);
     }
 
     function index() {
@@ -31,6 +33,22 @@ class Tickets extends CI_Controller {
         $this->load->view('ticket_view', $data);
     }
 
+    function view() {
+        $flight_id = $this->input->get('flight_id');
+        $flight = $this->flights_model->get_flight($flight_id);
+        $tickets = $this->tickets_model->get_tickets_by_flight($flight_id);
+        $ticket_passengers = array();
+        foreach ($tickets as $ticket) {
+            $ticket_id = $ticket->id;
+            $passengers = $this->passengers_model->get_passengers($ticket_id);
+            $ticket_passengers[$ticket_id] = $passengers;
+        }
+        $data['flight'] = $flight;
+        $data['tickets'] = $tickets;
+        $data['ticket_passengers'] = $ticket_passengers;
+        $this->load->view('tickets_view', $data);
+    }
+
     function print_ticket() {
         $ticket_id = $this->input->get('ticket_id');
         $ticket = $this->tickets_model->get_ticket($ticket_id);
@@ -51,10 +69,14 @@ class Tickets extends CI_Controller {
     }
 
     function buy() {
-        $search_params = $this->session->userdata('search_params');
-        $classes = $this->classes_model->get_class_map();
         $flight_to_id = $this->input->get('flight_to_id');
         $flight_return_id = $this->input->get('flight_return_id');
+        $this->load_add_ticket_view($flight_to_id, $flight_return_id);
+    }
+
+    function load_add_ticket_view($flight_to_id, $flight_return_id) {
+        $search_params = $this->session->userdata('search_params');
+        $classes = $this->classes_model->get_class_map();
         $flight_to = $this->flights_model->get_flight($flight_to_id);
         $this->flights_model->count_flight_price_by_params($search_params, $flight_to);
         $flight_return = $this->flights_model->get_flight($flight_return_id);
@@ -67,6 +89,7 @@ class Tickets extends CI_Controller {
         $data['type_list'] = $this->passenger_types_model->get_types_map();
         $this->load->view('add_ticket_view', $data);
     }
+
 
     function get_types($search_params) {
         $result = array();
@@ -85,12 +108,29 @@ class Tickets extends CI_Controller {
     function add() {
         $flight_to_id = $this->input->post('flight_to_id');
         $flight_return_id = $this->input->post('flight_return_id');
+        if (!$this->validate_passengers()) {
+            $this->load_add_ticket_view($flight_to_id, $flight_return_id);
+            return;
+        }
+
         $class_id = $this->input->post('class_id');
         $ticket_id = $this->tickets_model->create_ticket($flight_to_id, $flight_return_id, $class_id);
         for ($i = 1; $i < $this->input->post('passenger_count'); $i++) {
             $this->add_passenger($ticket_id, $i);
         }
         redirect("tickets?ticket_id=".$ticket_id);
+    }
+
+    function validate_passengers() {
+        for ($passenger_no = 1; $passenger_no < $this->input->post('passenger_count'); $passenger_no++) {
+            $this->form_validation->set_rules('name'.$passenger_no, 'lang:ui_name', 'required|max_length[12]');
+            $this->form_validation->set_rules('surname'.$passenger_no, 'Surname', 'required');
+            $this->form_validation->set_rules('luggage_count'.$passenger_no, 'Name', 'required|integer|greater_than[0]|less_than[10]');
+            $this->form_validation->set_rules('passport_number'.$passenger_no, 'Name', 'required');
+            $this->form_validation->set_rules('issue_date'.$passenger_no, 'Name', 'required');
+            $this->form_validation->set_rules('expiration_date'.$passenger_no, 'Name', 'required');
+        }
+        return $this->form_validation->run();
     }
 
     function add_passenger($ticket_id, $passenger_no) {

@@ -22,6 +22,12 @@ class Tickets_model extends CI_Model {
    */
     }
 
+    function get_tickets_by_flight($flight_id) {
+        $query = $this->db->query("select * from tickets where flight_to_id=".$flight_id." or flight_return_id=".$flight_id." order by class_id, id");
+        $tickets = $query->result();
+        return $tickets;
+    }
+
     function create_ticket($flight_to_id, $flight_return_id, $class_id) {
         $this->db->insert('tickets', array("flight_to_id" => $flight_to_id, "flight_return_id" => $flight_return_id, "class_id" => $class_id));
         return $this->db->insert_id();

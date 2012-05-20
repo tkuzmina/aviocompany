@@ -5,10 +5,11 @@ class Flights extends CI_Controller {
     function Flights() {
         parent::__construct();
 
-        $this->load->library(array('encrypt', 'form_validation', 'session'));
-        $this->load->helper(array('form', 'url', 'html'));
+        $this->load->library(array('encrypt', 'form_validation', 'session', 'lang'));
+        $this->load->helper(array('form', 'url', 'html', 'avio'));
         $this->load->model(array('flights_model', 'cities_model', 'planes_model', ));
 
+        init_avio_page($this->session, $this->lang);
     }
 
     function index() {
@@ -36,7 +37,7 @@ class Flights extends CI_Controller {
 		$price_e_infant = $this->input->post('price_e_infant');
 		$price_b_infant = $this->input->post('price_b_infant');
         $this->flights_model->insert_flight($city_from_id, $city_to_id, $date_from, $time_from, $duration, $plane_id, $price_economy, $price_business, $price_e_child, $price_b_child, $price_e_infant, $price_b_infant);
-        $this->session->set_flashdata('message', 'Flight was added successfully!');
+        $this->session->set_flashdata('info', 'Flight was added successfully!');
 		redirect("flights");
     }
 	
@@ -55,14 +56,14 @@ class Flights extends CI_Controller {
 		$price_e_infant = $this->input->post('price_e_infant');
 		$price_b_infant = $this->input->post('price_b_infant');
         $this->flights_model->update_flight($flight_id, $city_from_id, $city_to_id, $date_from, $time_from, $duration, $plane_id, $price_economy, $price_business, $price_e_child, $price_b_child, $price_e_infant, $price_b_infant);
-        $this->session->set_flashdata('message', 'Flight is eddited successfully!');
+        $this->session->set_flashdata('info', 'Flight is edited successfully!');
 		redirect("flights");
     }
 
     function delete() {
         $flight_id = $this->input->get('flight_id');
         $this->flights_model->delete_flight($flight_id);
-        $this->session->set_flashdata('message', 'Flight is deleted successfully!');
+        $this->session->set_flashdata('info', 'Flight is deleted successfully!');
 	    redirect("flights");
     }
 

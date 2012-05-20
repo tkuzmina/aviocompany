@@ -88,7 +88,7 @@
         $('button#buy').on('click', function() {
             var flight_to = $("#flight_to:checked");
             var flight_return = $("#flight_return:checked");
-            var url = "tickets/buy?flight_to_id=" + flight_to.val();
+            var url = '<?=avio_url("tickets/buy?flight_to_id=")?>' + flight_to.val();
             if (flight_return && flight_return.val()) {
                 url += "&flight_return_id=" + flight_return.val();
             }

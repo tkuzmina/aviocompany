@@ -29,7 +29,7 @@
             </span>
             <span class='view_data <?=$view_id?>'>
                 <a class="edit_button" id=<?="'edit_".$city->id."'" ?>><i class="icon-edit" title="edit"></i></a>
-                <a href='<?='cities/delete?city_id='.$city->id?>'><i class="icon-trash" title="delete"></i></a>
+                <a href='<?=avio_url('cities/delete?city_id='.$city->id)?>'<i class="icon-trash" title="delete"></i></a>
             </span>
         </td>
     </tr>
