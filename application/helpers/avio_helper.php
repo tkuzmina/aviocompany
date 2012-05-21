@@ -17,7 +17,7 @@ if (!function_exists('avio_url')) {
 
 if (!function_exists('avio_resource_url')) {
     function avio_resource_url($relative){
-        return "/avio/".$relative;
+        return "/aviocompany/".$relative;
     }
 }
 

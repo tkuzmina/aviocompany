@@ -1,13 +1,13 @@
 <?php include("header.php"); ?>
 
-<h1 class="title">Cities</h1>
-<a class="btn btn-primary" data-toggle="modal" href="#newCity" >Add new city</a>
+<h1 class="title"><?=$this->lang->line('ui_cities')?></h1>
+<a class="btn btn-primary" data-toggle="modal" href="#newCity" ><?=$this->lang->line('ui_add_new_city')?></a>
 <table class="table table-bordered citiesTable">
-<h2>Existing cities</h2>
+<h2><?=$this->lang->line('ui_existing_cities')?></h2>
     <thead>
         <tr>
-            <td width='100px'>Name</td>
-			<td>Actions</td>
+            <td width='100px'><?=$this->lang->line('ui_city_name')?></td>
+			<td><?=$this->lang->line('ui_actions')?></td>
 	    </tr>
     </thead>			
  <?php foreach ($cities as $city): ?>
@@ -24,7 +24,7 @@
         </td>
         <td>
             <span class='edit_data <?=$edit_id?>'>
-                <?=form_submit('edit_city', 'Save', "class='btn btn-primary'")?>
+                <?=form_submit('edit_city', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
                 <a class="cancel_button"><i class="icon-remove"></i></a>
             </span>
             <span class='view_data <?=$view_id?>'>
@@ -41,19 +41,19 @@
 <div class="modal" id="newCity">
     <div class="modal-header">
         <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
-        <h2>Add new city</h2>
+        <h2><?=$this->lang->line('ui_add_new_city')?></h2>
     </div>
     <?=form_open('cities/add', array("class" => "form-horizontal"))?>
         <div class="modal-body">
             <div class="control-group">
-                <label class="control-label" for="name">Name</label>
+                <label class="control-label" for="name"><?=$this->lang->line('ui_city_name')?></label>
                 <div class="controls">		
                     <?=form_input('name','')?>
 			    </div>
 			</div>       
             <div class="modal-footer">
-                <a class="btn" id="newCityClose">Close</a>
-                <?=form_submit('add_city', 'Save', "class='btn btn-primary'")?>
+                <a class="btn" id="newCityClose"><?=$this->lang->line('ui_close')?></a>
+                <?=form_submit('add_city', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
             </div>
     <?=form_close();?>
        </div>

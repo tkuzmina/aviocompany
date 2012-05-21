@@ -51,7 +51,7 @@
 			<img src='<?=avio_resource_url("img/avio.png")?>' alt="" title="" />
 			<img class="img" src='<?=avio_resource_url("img/avio_lv.png")?>' alt="" title="" />
 			</a>
-	        <div class="phone">Phone:<span class="number"> &nbsp;(+371) 645 67 349</span></div>
+	        <div class="phone"><?=$this->lang->line('ui_phone')?>:<span class="number"> &nbsp;(+371) 645 67 349</span></div>
 
 		</div>
 
@@ -76,9 +76,9 @@
                         <?php endif; ?>
                     </ul>
                     <ul class="nav pull-right">
-                        <li><a href="#">Welcome, <?=$current_user->name?> <?=$current_user->surname?></a></li>
+                        <li><a href="#"><?=$this->lang->line('ui_welcome')?>, <?=$current_user->name?> <?=$current_user->surname?></a></li>
 						<li class="divider-vertical"></li>
-                        <li><a class="logout" href='<?=avio_url("users/logout")?>'>Logout</a></li>
+                        <li><a class="logout" href='<?=avio_url("users/logout")?>'><?=$this->lang->line('ui_logout')?></a></li>
                     </ul>
                 </div>
             </div>

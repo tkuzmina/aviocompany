@@ -107,7 +107,7 @@ create table passengers (
   type_id int not null,
   name char(255) not null,
   surname char(255) not null,
-  luggage_count int  not null,
+  luggage_count int,
   passport_number char(20) not null,
   issue_date date not null,
   expiration_date date not null,
@@ -132,7 +132,7 @@ create table questions(
   id int not null auto_increment,
   name char(255) not null,
   text text not null,
-  email char(255),
+  email char(255) not null,
   created_date datetime not null,
 
   primary key (id)

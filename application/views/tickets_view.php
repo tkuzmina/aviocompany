@@ -6,10 +6,10 @@
 <table class='table table-bordered'>
     <thead>
     <tr>
-        <th>City from</th>
-        <th>City to</th>
-        <th>Date</th>
-        <th>Time of departure</th>
+        <th><?=$this->lang->line('ui_city_from')?>City from</th>
+        <th><?=$this->lang->line('ui_city_to')?>City to</th>
+        <th><?=$this->lang->line('ui_date')?>Date</th>
+        <th><?=$this->lang->line('ui_time_of_departure')?>Time of departure</th>
         <th>Plane model</th>
         <th>Seats free (E)</th>
         <th>Seats free (B)</th>
@@ -34,12 +34,12 @@
 <table class="table table-bordered">
 <thead>
 <tr>
-  <th>Name</th>
-  <th>Surname</th>
-  <th>Luggage count</th>
-  <th>Passport number</th>
-  <th>Issue date</th>
-  <th>Expiration date</th>
+  <th><?=$this->lang->line('ui_person_name')?></th>
+  <th><?=$this->lang->line('ui_person_surname')?></th>
+  <th><?=$this->lang->line('ui_luggage_count')?></th>
+  <th><?=$this->lang->line('ui_passport_number')?></th>
+  <th><?=$this->lang->line('ui_date_of issue')?></th>
+  <th><?=$this->lang->line('ui_date_of_expiration')?></th>
 </tr>
 </thead>
 <?php foreach ($ticket_passengers[$ticket->id] as $passenger): ?>

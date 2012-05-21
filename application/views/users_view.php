@@ -1,18 +1,18 @@
 <?php include("header.php"); ?>
-<h1>User menu</h1>
+<h1 class="title"><?=$this->lang->line('ui_users')?></h1>
 
-<a class="btn btn-primary" data-toggle="modal" href="#newUser" >Add new user</a>
+<a class="btn btn-primary" data-toggle="modal" href="#newUser" ><?=$this->lang->line('ui_add_new_user')?></a>
 
 <table class="table table-bordered usersTable">
-<h2>Existing users</h2>
+<h2><?=$this->lang->line('ui_existing_users')?></h2>
 <thead>    
 <tr>
-    <th>Login</th>
-    <th>Name</th>
-    <th>Surname</th>
-    <th>Email</th>
-    <th>Role</th>
-    <th>Actions</th>
+    <th><?=$this->lang->line('ui_login')?></th>
+    <th><?=$this->lang->line('ui_person_name')?></th>
+    <th><?=$this->lang->line('ui_person_surname')?></th>
+    <th><?=$this->lang->line('ui_email')?></th>
+    <th><?=$this->lang->line('ui_role')?></th>
+    <th><?=$this->lang->line('ui_actions')?></th>
 </tr>
 </thead>
 
@@ -45,7 +45,7 @@
         </td>
         <td>
             <span class='edit_data <?=$edit_id?>'>
-                <?=form_submit('edit_user', 'Save', "class='btn btn-primary'")?>
+                <?=form_submit('edit_user', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
                 <a class="cancel_button"><i class="icon-remove"></i></a>
             </span>
             <span class='view_data <?=$view_id?>'>
@@ -61,49 +61,49 @@
 <div class="modal" id="newUser">
     <div class="modal-header">
         <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
-        <h2>Add new user</h2>
+        <h2><?=$this->lang->line('ui_add_new_user')?></h2>
     </div>
     <?=form_open('users/add', array("class" => "form-horizontal"))?>
     <div class="modal-body">
         <div class="control-group">
-            <label class="control-label" for="login">Login</label>
+            <label class="control-label" for="login"><?=$this->lang->line('ui_login')?></label>
             <div class="controls">
                 <?=form_input('login', '')?>
 			</div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="password">Password</label>
+            <label class="control-label" for="password"><?=$this->lang->line('ui_password')?></label>
             <div class="controls">
                 <?=form_password('password', '')?>
 			</div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="name">Name</label>
+            <label class="control-label" for="name"><?=$this->lang->line('ui_person_name')?></label>
             <div class="controls">
                 <?=form_input('name', '')?>
             </div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="surname">Surname</label>
+            <label class="control-label" for="surname"><?=$this->lang->line('ui_person_surname')?></label>
             <div class="controls">
                 <?=form_input('surname', '')?>
             </div>
         </div>
 		<div class="control-group">
-            <label class="control-label" for="email">E-mail</label>
+            <label class="control-label" for="email"><?=$this->lang->line('ui_email')?></label>
             <div class="controls">
                 <?=form_input('email', '')?>
 		    </div>
         </div>
 		<div class="control-group">
-            <label class="control-label" for="role_id">Role</label>
+            <label class="control-label" for="role_id"><?=$this->lang->line('ui_role')?></label>
             <div class="controls">
                 <?=form_dropdown("role_id", $roles, array())?>
 			</div>
         </div>
         <div class="modal-footer">
-            <a class="btn" id="newUserClose">Close</a>
-            <?=form_submit('add_user', 'Save', "class='btn btn-primary'")?>
+            <a class="btn" id="newUserClose"><?=$this->lang->line('ui_close')?></a>
+            <?=form_submit('add_user', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
         </div>
     <?=form_close();?>
     </div>

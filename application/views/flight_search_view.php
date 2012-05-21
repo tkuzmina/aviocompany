@@ -1,13 +1,13 @@
 <?php include("header.php"); ?>
 
-<h1>Airtickets search and reservation</h1>
+<h1><?=$this->lang->line('ui_airtickets_search_and_resevation')?></h1>
 
 <?php include("search_view.php"); ?>
 
 <table class="fill">
 <tr>
-    <td><h1>Flights to:</h1></td>
-    <?php if ($date_return): ?><td><h1>Return flights:</h1></td><?php endif; ?>
+    <td><h1><?=$this->lang->line('ui_flights_to')?>:</h1></td>
+    <?php if ($date_return): ?><td><h1><?=$this->lang->line('ui_return_flights')?>:</h1></td><?php endif; ?>
 </tr>
 <tr>
     <td>
@@ -16,12 +16,12 @@
             <thead>
             <tr>
                 <th></th>
-                <th>City from</th>
-                <th>City to</th>
-                <th>Date</th>
-				<th>Time of departure</th>
-                <th>Plane model</th>
-                <th>Price</th>
+                <th><?=$this->lang->line('ui_city_from')?></th>
+                <th><?=$this->lang->line('ui_city_to')?></th>
+                <th><?=$this->lang->line('ui_date')?></th>
+				<th><?=$this->lang->line('ui_time_of_departure')?></th>
+                <th><?=$this->lang->line('ui_plane_model')?></th>
+                <th><?=$this->lang->line('ui_price')?></th>
             </tr>
             </thead>
         <?php $checked = true ?>
@@ -39,7 +39,7 @@
         <?php endforeach; ?>
         </table>
         <?php else: ?>
-            <h2>No flights found for this date.</h2>
+            <h2><?=$this->lang->line('ui_no_flights_found')?>.</h2>
         <?php endif; ?>
     </td>
     <td>
@@ -49,12 +49,12 @@
             <thead>
             <tr>
                 <th></th>
-                <th>City from</th>
-                <th>City to</th>
-                <th>Date</th>
-				<th>Time of departure</th>
-                <th>Plane model</th>
-                <th>Price</th>
+                <th><?=$this->lang->line('ui_city_from')?></th>
+                <th><?=$this->lang->line('ui_city_to')?></th>
+                <th><?=$this->lang->line('ui_date')?></th>
+				<th><?=$this->lang->line('ui_time_of_departure')?></th>
+                <th><?=$this->lang->line('ui_plane_model')?></th>
+                <th><?=$this->lang->line('ui_price')?></th>
             </tr>
             </thead>
     <?php $checked = true ?>
@@ -72,7 +72,7 @@
     <?php endforeach; ?>
         </table>
     <?php else: ?>
-        <h2>No flights found for this date.</h2>
+        <h2><th><?=$this->lang->line('ui_no_flights_found')?></th>.</h2>
     <?php endif; ?>
     </td>
     <?php endif; ?>
@@ -80,7 +80,7 @@
 </table>
 
 <?php if ($flights_to && (!$date_return || $flights_return)): ?>
-<button id="buy" class="btn btn-primary">Buy</button>
+<button id="buy" class="btn btn-primary"><th><?=$this->lang->line('ui_buy')?></th></button>
 <?php endif; ?>
 
 <script>

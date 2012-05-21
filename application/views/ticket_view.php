@@ -1,26 +1,26 @@
 <?php include("header.php"); ?>
-<div class="alert alert-success">Thank you for choosing our aviocompany!</div>
+<div class="alert alert-success"><?=$this->lang->line('ui_thank_you')?>!</div>
 <table class="table table-bordered">
 <thead>
-<h1>Information about flight:</h1>
-<h2>Reservation number: <strong><?=$ticket->id?></strong></h2>
+<h1><?=$this->lang->line('ui_information_about_flight')?></h1>
+<h2><?=$this->lang->line('ui_reservation_number')?>: <strong><?=$ticket->id?></strong></h2>
 
 <table class="fill">
 <tr>
-    <td><h2>Flight to:</h2></td>
-    <?php if ($flight_return): ?><td><h2>Return flight:</h2></td><?php endif; ?>
+    <td><h2><?=$this->lang->line('ui_flight_to')?>:</h2></td>
+    <?php if ($flight_return): ?><td><h2><?=$this->lang->line('ui_return_flight')?>:</h2></td><?php endif; ?>
 </tr>
 <tr>
     <td>
         <table class='table table-bordered'>
             <thead>
             <tr>
-                <th>City from</th>
-                <th>City to</th>
-                <th>Date</th>
-				<th>Time of departure</th>
-                <th>Plane model</th>
-                <th>Price</th>
+                <th><?=$this->lang->line('ui_city_from')?></th>
+                <th><?=$this->lang->line('ui_city_to')?></th>
+                <th><?=$this->lang->line('ui_date')?></th>
+				<th><?=$this->lang->line('ui_time_of_departure')?></th>
+                <th><?=$this->lang->line('ui_plane_model')?></th>
+                <th><?=$this->lang->line('ui_price')?></th>
             </tr>
             </thead>
             <tr>
@@ -38,12 +38,12 @@
         <table class='table table-bordered'>
             <thead>
             <tr>
-                <th>City from</th>
-                <th>City to</th>
-                <th>Date</th>
-				<th>Time of departure</th>
-                <th>Plane model</th>
-                <th>Price</th>
+                <th><?=$this->lang->line('ui_city_from')?></th>
+                <th><?=$this->lang->line('ui_city_to')?></th>
+                <th><?=$this->lang->line('ui_date')?></th>
+				<th><?=$this->lang->line('ui_time_of_departure')?></th>
+                <th><?=$this->lang->line('ui_plane_model')?></th>
+                <th><?=$this->lang->line('ui_price')?></th>
             </tr>
             </thead>
             <tr>
@@ -62,14 +62,14 @@
 
 <table class="table table-bordered">
 <thead>
-<h2>Information about passenger(s):</h2>
+<h2><?=$this->lang->line('ui_information_about_passengers')?>:</h2>
 <tr>
-  <th>Name</th>
-  <th>Surname</th>
-  <th>Luggage count</th>
-  <th>Passport number</th>
-  <th>Issue date</th>
-  <th>Expiration date</th>
+  <th><?=$this->lang->line('ui_person_name')?></th>
+  <th><?=$this->lang->line('ui_person_surname')?></th>
+  <th><?=$this->lang->line('ui_luggage_count')?></th>
+  <th><?=$this->lang->line('ui_passport_number')?></th>
+  <th><?=$this->lang->line('ui_date_of_issue')?></th>
+  <th><?=$this->lang->line('ui_date_of_expiration')?></th>
 </tr>
 </thead>
 <?php foreach ($passengers as $passenger): ?>
@@ -84,8 +84,8 @@
 <?php endforeach ?>
 </table>
 
-<button class="btn btn-primary" id="printTickets" value=<?="tickets/print_ticket?ticket_id=".$ticket->id?>>View tickets</button>
-<div class="pull-right"><a class="btn btn-primary pad-right" href='<?=avio_url("main")?>'>Go to the main page</a></div>
+<button class="btn btn-primary" id="printTickets" value=<?="tickets/print_ticket?ticket_id=".$ticket->id?>><?=$this->lang->line('ui_view_tickets')?></button>
+<div class="pull-right"><a class="btn btn-primary pad-right" href='<?=avio_url("main")?>'><?=$this->lang->line('ui_main')?></a></div>
 <script>
     $(function() {
         $("#printTickets").on('click', function() {

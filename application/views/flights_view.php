@@ -1,28 +1,28 @@
 <?php include("header.php"); ?>
-<h1 class="title">Flights</h1>
+<h1 class="title"><?=$this->lang->line('ui_flights')?></h1>
 
-<a class="btn btn-primary" data-toggle="modal" href="#newFlight" >Add new flight</a>
+<a class="btn btn-primary" data-toggle="modal" href="#newFlight" ><?=$this->lang->line('ui_add_new_flight')?></a>
 
 <table class="table table-bordered flightsTable fill">
-<h2>Existing flights</h2>
+<h2><?=$this->lang->line('ui_existing_flights')?></h2>
     <thead>
     <tr>
-        <th rowspan="2">City from</th>
-        <th rowspan="2">City to</th>
-        <th rowspan="2">Date from</th>
-		<th rowspan="2">Time of departure</th>
-        <th rowspan="2">Plane model</th>
-        <th colspan="2">Seats free</th>
+        <th rowspan="2"><?=$this->lang->line('ui_city_from')?></th>
+        <th rowspan="2"><?=$this->lang->line('ui_city_to')?></th>
+        <th rowspan="2"><?=$this->lang->line('ui_date_from')?></th>
+		<th rowspan="2"><?=$this->lang->line('ui_time_of_departure')?></th>
+        <th rowspan="2"><?=$this->lang->line('ui_plane_model')?></th>
+        <th colspan="2"><?=$this->lang->line('ui_seats_free')?></th>
         <th rowspan="2"></th>
-        <th colspan="3">Prices</th>
-        <th rowspan="2"></th>
+        <th colspan="3"><?=$this->lang->line('ui_prices')?></th>
+        <th rowspan="2"><?=$this->lang->line('ui_actions')?></th>
     </tr>
     <tr>
         <th>E</th>
         <th>B</th>
-        <th>Adult</th>
-        <th>Child</th>
-        <th>Infant</th>
+        <th><?=$this->lang->line('ui_adult')?></th>
+        <th><?=$this->lang->line('ui_child')?></th>
+        <th><?=$this->lang->line('ui_infant')?></th>
     </tr>
     </thead>
     <?php foreach ($flights as $flight): ?>
@@ -70,7 +70,7 @@
         </td>
         <td rowspan="2">
             <span class='edit_data <?=$edit_id?>'>
-                <?=form_submit('edit_flight', 'Save', "class='btn btn-primary'")?>
+                <?=form_submit('edit_flight', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
                 <a class="cancel_button"><i class="icon-remove"></i></a>
             </span>
             <span class='view_data <?=$view_id?>'>
@@ -103,16 +103,16 @@
 <div class="modal" id="newFlight">
     <div class="modal-header">
         <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
-        <h2>Add new flight</h2>
+        <h2><?=$this->lang->line('ui_add_new_flight')?></h2>
     </div>
     <?=form_open('flights/add', array("class" => "form-horizontal"))?>
     <div class="modal-body">
         <table class="table fill">
             <thead>
             <tr>
-                <th>City from</th>
-                <th>City to</th>
-                <th>Plane</th>
+                <th><?=$this->lang->line('ui_city_from')?></th>
+                <th><?=$this->lang->line('ui_city_to')?></th>
+                <th><?=$this->lang->line('ui_plane')?></th>
             </tr>
             </thead>
             <tr>
@@ -125,9 +125,9 @@
         <table class="table fill">
             <thead>
             <tr>
-                <th>Date from</th>
-                <th>Time from</th>
-                <th>Duration</th>
+                <th><?=$this->lang->line('ui_date_from')?></th>
+                <th><?=$this->lang->line('ui_time_from')?></th>
+                <th><?=$this->lang->line('ui_duration')?></th>
             </tr>
             </thead>
             <tr>
@@ -141,30 +141,30 @@
           <thead>
           <tr>
               <th></th>
-              <th>Economy class</th>
-              <th>Business class</th>
+              <th><?=$this->lang->line('ui_economy_class')?></th>
+              <th><?=$this->lang->line('ui_business_class')?></th>
           </tr>
           </thead>
           <tr>
-              <td><strong>Adult</strong></td>
+              <td><strong><?=$this->lang->line('ui_adult')?></strong></td>
               <td><div class="input-append"><?=form_input(array('class' => 'span1', 'name' => 'price_economy', 'id' => 'price_economy'))?><span class="add-on">Ls</span></div></td>
               <td><div class="input-append"><?=form_input(array('class' => 'span1', 'name' => 'price_business', 'id' => 'price_business'))?><span class="add-on">Ls</span></div></td>
           </tr>
           <tr>
-              <td><strong>Child</strong></td>
+              <td><strong><?=$this->lang->line('ui_child')?></strong></td>
               <td><div class="input-append"><?=form_input(array('class' => 'span1', 'name' => 'price_e_child', 'id' => 'price_e_child'))?><span class="add-on">Ls</span></div></td>
               <td><div class="input-append"><?=form_input(array('class' => 'span1', 'name' => 'price_b_child', 'id' => 'price_b_child'))?><span class="add-on">Ls</span></div></td>
           </tr>
           <tr>
-              <td><strong>Infant</strong></td>
+              <td><strong><?=$this->lang->line('ui_infant')?></strong></td>
               <td><div class="input-append"><?=form_input(array('class' => 'span1', 'name' => 'price_e_infant', 'id' => 'price_e_infant'))?><span class="add-on">Ls</span></div></td>
               <td><div class="input-append"><?=form_input(array('class' => 'span1', 'name' => 'price_b_infant', 'id' => 'price_b_infant'))?><span class="add-on">Ls</span></div></td>
           </tr>
         </table>
     </div>
   <div class="modal-footer">
-      <a class="btn" id="newFlightClose">Close</a>
-      <?=form_submit('edit_flight', 'Save', "class='btn btn-primary'")?>
+      <a class="btn" id="newFlightClose"><?=$this->lang->line('ui_close')?></a>
+      <?=form_submit('edit_flight', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
   </div>
     <?=form_close();?>
 </div>

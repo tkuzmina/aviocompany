@@ -1,19 +1,19 @@
 <?php include("header.php"); ?>
 
-<h1 class="title">Planes</h1>
+<h1 class="title"><?=$this->lang->line('ui_planes')?></h1>
 
-<a class="btn btn-primary" data-toggle="modal" href="#newPlane" >Add new plane</a>
+<a class="btn btn-primary" data-toggle="modal" href="#newPlane" ><?=$this->lang->line('ui_add_new_plane')?></a>
 
 
 <table class="table table-bordered flightsTable">
-<h2>Existing planes</h2>
+<h2><?=$this->lang->line('ui_existing_planes')?></h2>
     <thead>
         <tr>
-            <td>Model:</td>
-            <td>Seats ecoonomy:</td>
-            <td>Seats business:</td>
-            <td>Luggage count:</td>
-			<td>Actions</td>
+            <td><?=$this->lang->line('ui_model')?>:</td>
+            <td><?=$this->lang->line('ui_seats_economy')?>:</td>
+            <td><?=$this->lang->line('ui_seats_business')?>:</td>
+            <td><?=$this->lang->line('ui_luggage_count')?>:</td>
+			<td><?=$this->lang->line('ui_actions')?></td>
 	    </tr>
     </thead>			
 <?php foreach ($planes as $plane): ?>
@@ -42,7 +42,7 @@
         </td>
         <td>
             <span class='edit_data <?=$edit_id?>'>
-                <?=form_submit('edit_plane', 'Save', "class='btn btn-primary'")?>
+                <?=form_submit('edit_plane', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
                 <a class="cancel_button"><i class="icon-remove"></i></a>
             </span>
             <span class='view_data <?=$view_id?>'>
@@ -59,37 +59,37 @@
 <div class="modal" id="newPlane">
     <div class="modal-header">
         <button class="close" data-dismiss="modal"><i class="icon-remove"></i></button>
-        <h2>Add new plane</h2>
+        <h2><?=$this->lang->line('ui_add_new_plane')?></h2>
     </div>
     <?=form_open('planes/add', array("class" => "form-horizontal"))?>
     <div class="modal-body">
         <div class="control-group">
-            <label class="control-label" for="model">Model</label>
+            <label class="control-label" for="model"><?=$this->lang->line('ui_model')?></label>
             <div class="controls">			
                 <?=form_input('model', '')?>
 			</div>
         </div>
         <div class="control-group">
-            <label class="control-label" for="seats_economy">Seats ecoonomy</label>
+            <label class="control-label" for="seats_economy"><?=$this->lang->line('ui_seats_economy')?></label>
             <div class="controls">	
                 <?=form_input('seats_economy', '')?>
 			</div>
         </div>
 		<div class="control-group">
-            <label class="control-label" for="seats_business">Seats business</label>
+            <label class="control-label" for="seats_business"><?=$this->lang->line('ui_seats_business')?></label>
             <div class="controls">	
                 <?=form_input('seats_business', '')?>
 		    </div>
         </div>
 		<div class="control-group">
-            <label class="control-label" for="luggage_count">Luggage count</label>
+            <label class="control-label" for="luggage_count"><?=$this->lang->line('ui_luggage_count')?></label>
             <div class="controls">	
                 <?=form_input('luggage_count', '')?>
 			</div>
         </div>
         <div class="modal-footer">
-            <a class="btn" id="newPlaneClose">Close</a>
-            <?=form_submit('add_plane', 'Save', "class='btn btn-primary'")?>
+            <a class="btn" id="newPlaneClose"><?=$this->lang->line('ui_close')?></a>
+            <?=form_submit('add_plane', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
         </div>
     <?=form_close();?>
     </div>

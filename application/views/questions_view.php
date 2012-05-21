@@ -1,15 +1,15 @@
 <?php include("header.php"); ?>
 
-<h1 class="title">Questions</h1>
+<h1 class="title"><?=$this->lang->line('ui_questions')?></h1>
 <table class="table table-bordered">
-<h2>Submitted questions</h2>
+<h2><?=$this->lang->line('ui_submitted_questions')?></h2>
     <thead>
         <tr>
-            <td width='130px'>Submitted on</td>
-            <td width='100px'>Name</td>
-            <td width='100px'>Email</td>
-            <td>Text</td>
-			<td width='100px'>Actions</td>
+            <td width='130px'><?=$this->lang->line('ui_submitted_on')?></td>
+            <td width='100px'><?=$this->lang->line('ui_person_name')?></td>
+            <td width='100px'><?=$this->lang->line('ui_email')?></td>
+            <td><?=$this->lang->line('ui_text')?></td>
+			<td width='100px'><?=$this->lang->line('ui_actions')?></td>
 	    </tr>
     </thead>			
  <?php foreach ($questions as $question): ?>
@@ -23,5 +23,6 @@
 <?php endforeach; ?>
 	
 </table>
+
 
 <?php include("footer.php"); ?>
