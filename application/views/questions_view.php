@@ -23,6 +23,14 @@
 <?php endforeach; ?>
 	
 </table>
-
+<script type="text/javascript">
+    $(function() {
+		var menuItems = $(".menuItem");
+        if (menuItems) {
+        menuItems.removeClass("active");
+        $(".menuItem#questions").addClass("active");
+        }
+    })
+</script>
 
 <?php include("footer.php"); ?>

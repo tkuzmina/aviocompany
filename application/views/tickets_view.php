@@ -1,18 +1,18 @@
 <?php include("header.php"); ?>
 <table class="table table-bordered">
 <thead>
-<h1>Flight reservations:</h1>
+<h1><?=$this->lang->line('ui_flight_reservations')?>:</h1>
 
 <table class='table table-bordered'>
     <thead>
     <tr>
-        <th><?=$this->lang->line('ui_city_from')?>City from</th>
-        <th><?=$this->lang->line('ui_city_to')?>City to</th>
-        <th><?=$this->lang->line('ui_date')?>Date</th>
-        <th><?=$this->lang->line('ui_time_of_departure')?>Time of departure</th>
-        <th>Plane model</th>
-        <th>Seats free (E)</th>
-        <th>Seats free (B)</th>
+        <th><?=$this->lang->line('ui_city_from')?></th>
+        <th><?=$this->lang->line('ui_city_to')?></th>
+        <th><?=$this->lang->line('ui_date')?></th>
+        <th><?=$this->lang->line('ui_time_of_departure')?></th>
+        <th><?=$this->lang->line('ui_plane_model')?></th>
+        <th><?=$this->lang->line('ui_seats_free')?> (E)</th>
+        <th><?=$this->lang->line('ui_seats_free')?>(B)</th>
     </tr>
     </thead>
     <tr>
@@ -28,8 +28,8 @@
 
 <?php foreach ($tickets as $ticket): ?>
 <h3>
-    Reservation ID: <?=$ticket->id?>
-    <span class="pull-right"><?= $ticket->class_id == 1 ? "ECONOMY" : "BUSINESS" ?></span>
+    <?=$this->lang->line('ui_reservation')?> ID: <?=$ticket->id?>
+    <span class="pull-right"><?= $ticket->class_id == 1 ? $this->lang->line('ui_economy_class') : $this->lang->line('ui_business_class') ?></span>
 </h3>
 <table class="table table-bordered">
 <thead>

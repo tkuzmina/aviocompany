@@ -21,13 +21,13 @@
 
 
 <div class="ticket_container">
-<div class="ticket_header">Please present your ticket and passport at airport check-in.</div>
+<div class="ticket_header"><?=$this->lang->line('ui_please_present_your_ticket')?>.</div>
 <table>
     <tr class="ticket_label">
-        <td>Passenger name</td>
-        <td>Passenger surname</td>
-        <td>Passport No.</td>
-        <td>Flight No.</td>
+        <td><?=$this->lang->line('ui_passenger_name')?></td>
+        <td><?=$this->lang->line('ui_passenger_surname')?></td>
+        <td><?=$this->lang->line('ui_passport_no')?></td>
+        <td><?=$this->lang->line('ui_flight_no')?></td>
     </tr>
     <tr class="ticket_data">
         <td><?=$passenger->name?></td>
@@ -36,8 +36,8 @@
         <td><?=$flight->id?></td>
     </tr>
     <tr class="ticket_label">
-        <td>From</td>
-        <td>To</td>
+        <td><?=$this->lang->line('ui_city_from')?></td>
+        <td><?=$this->lang->line('ui_city_to')?></td>
         <td>Departure date</td>
         <td>Boarding time</td>
     </tr>
@@ -51,14 +51,14 @@
         <td colspan="4"></td>
     </tr>
 </table>
-<div class="ticket_footer"><?= $ticket->class_id == 1 ? "ECONOMY" : "BUSINESS" ?> CLASS</div>
+<div class="ticket_footer"><?= $ticket->class_id == 1 ? $this->lang->line('ui_economy_class') : $this->lang->line('ui_business_class') ?> </div>
 </div>
 
 <?php endforeach ?>
 <?php endforeach ?>
-<form><input type="button" value=" Print this page "
+<form><input type="button" value=" <?=$this->lang->line('ui_print')?> "
 onclick="window.print();" /></form>
-<script src="http://cdn.printfriendly.com/printfriendly.js" type="text/javascript"></script><a href="http://www.printfriendly.com" style=" color:#6D9F00; text-decoration:none;" class="printfriendly" onclick="window.print(); return false;" title="Printer Friendly and PDF"><img style="border:none;" src="http://cdn.printfriendly.com/pf_button_sq_gry_m.png" alt="Print Friendly and PDF"/></a>
+
 </div>
 </div>
 </body>

@@ -123,12 +123,12 @@ class Tickets extends CI_Controller {
 
     function validate_passengers() {
         for ($passenger_no = 1; $passenger_no < $this->input->post('passenger_count'); $passenger_no++) {
-            $this->form_validation->set_rules('name'.$passenger_no, 'lang:ui_name', 'required|max_length[12]');
-            $this->form_validation->set_rules('surname'.$passenger_no, 'Surname', 'required');
-            $this->form_validation->set_rules('luggage_count'.$passenger_no, 'Name', 'required|integer|greater_than[0]|less_than[10]');
-            $this->form_validation->set_rules('passport_number'.$passenger_no, 'Name', 'required');
-            $this->form_validation->set_rules('issue_date'.$passenger_no, 'Name', 'required');
-            $this->form_validation->set_rules('expiration_date'.$passenger_no, 'Name', 'required');
+            $this->form_validation->set_rules('name'.$passenger_no, 'lang:ui_passenger_name', 'required|alpha|max_length[30]');
+            $this->form_validation->set_rules('surname'.$passenger_no, 'lang:ui_passenger_surname', 'required|alpha|max_length[30]');
+            $this->form_validation->set_rules('luggage_count'.$passenger_no, 'lang:ui_luggage_count', 'required|integer|less_than[10]');
+            $this->form_validation->set_rules('passport_number'.$passenger_no, 'lang:ui_passport_no', 'required|alpha_dash');
+            $this->form_validation->set_rules('issue_date'.$passenger_no, 'lang:ui_date_of_issue', 'required');
+            $this->form_validation->set_rules('expiration_date'.$passenger_no, 'lang:ui_date_of_expiration', 'required');
         }
         return $this->form_validation->run();
     }

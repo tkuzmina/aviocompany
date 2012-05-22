@@ -37,7 +37,7 @@ class Flights extends CI_Controller {
 		$price_e_infant = $this->input->post('price_e_infant');
 		$price_b_infant = $this->input->post('price_b_infant');
         $this->flights_model->insert_flight($city_from_id, $city_to_id, $date_from, $time_from, $duration, $plane_id, $price_economy, $price_business, $price_e_child, $price_b_child, $price_e_infant, $price_b_infant);
-        $this->session->set_flashdata('info', 'Flight was added successfully!');
+        $this->session->set_flashdata('info', $this->lang->line('ui_flight_add'));
 		redirect("flights");
     }
 	
@@ -56,14 +56,14 @@ class Flights extends CI_Controller {
 		$price_e_infant = $this->input->post('price_e_infant');
 		$price_b_infant = $this->input->post('price_b_infant');
         $this->flights_model->update_flight($flight_id, $city_from_id, $city_to_id, $date_from, $time_from, $duration, $plane_id, $price_economy, $price_business, $price_e_child, $price_b_child, $price_e_infant, $price_b_infant);
-        $this->session->set_flashdata('info', 'Flight is edited successfully!');
+        $this->session->set_flashdata('info', $this->lang->line('ui_flight_edit'));
 		redirect("flights");
     }
 
     function delete() {
         $flight_id = $this->input->get('flight_id');
         $this->flights_model->delete_flight($flight_id);
-        $this->session->set_flashdata('info', 'Flight is deleted successfully!');
+        $this->session->set_flashdata('info', $this->lang->line('ui_flight_delete'));
 	    redirect("flights");
     }
 

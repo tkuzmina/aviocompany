@@ -54,14 +54,14 @@ class Users extends CI_Controller {
         $email = $this->input->post('email');
         $role_id = $this->input->post('role_id');
         $this->users_model->insert_user($login, $password, $name, $surname, $email, $role_id);
-        $this->session->set_flashdata('message', 'User was added successfully!');
+        $this->session->set_flashdata('info', $this->lang->line('ui_user_add'));
         redirect("users");
     }
 
     function delete() {
         $user_id = $this->input->get('user_id');
         $this->users_model->delete_user($user_id);
-        $this->session->set_flashdata('message', 'User is deleted successfully!');
+        $this->session->set_flashdata('info',  $this->lang->line('ui_user_delete'));
         redirect("users");
     }
 
@@ -72,7 +72,7 @@ class Users extends CI_Controller {
         $email = $this->input->post('email');
         $role_id = $this->input->post('role_id');
         $this->users_model->update_user($user_id, $name, $surname, $email, $role_id);
-        $this->session->set_flashdata('message', 'User is eddited successfully!');  
+        $this->session->set_flashdata('info',  $this->lang->line('ui_user_edit'));  
         redirect("users");
     }
 

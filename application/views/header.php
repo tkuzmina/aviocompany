@@ -55,7 +55,7 @@
 
 		</div>
 
-        <div>
+        <div class="languages">
             <button class="btn switch_language">en</button>
             <button class="btn switch_language">lv</button>
             <button class="btn switch_language">ru</button>

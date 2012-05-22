@@ -80,7 +80,7 @@
 </table>
 
 <?php if ($flights_to && (!$date_return || $flights_return)): ?>
-<button id="buy" class="btn btn-primary"><th><?=$this->lang->line('ui_buy')?></th></button>
+<button id="buy" class="btn btn-primary"><th><?=$this->lang->line('ui_choose')?></th></button>
 <?php endif; ?>
 
 <script>

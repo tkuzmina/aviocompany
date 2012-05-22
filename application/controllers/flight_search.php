@@ -17,13 +17,9 @@ class Flight_search extends CI_Controller {
         $city_list = $this->cities_model->get_city_list();
 		$plane_list = $this->planes_model->get_plane_list();
 		$classes_list = $this->classes_model->get_class_map();
-//        $flights = array();
-
         $date_return = get_value('date_return', $search_params);
         $flights_to = $this->flights_model->get_flights_by_criteria($search_params, true);
         $flights_return = $date_return ? $this->flights_model->get_flights_by_criteria($search_params, false) : NULL;
-
-     //   $flights = $this->flights_model->search($search_params);
         $data['city_list'] = $city_list;
 		$data['plane_list'] = $plane_list;
 		$data['count_list'] = $this->get_count_list();
