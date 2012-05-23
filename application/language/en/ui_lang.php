@@ -121,4 +121,6 @@ $lang['ui_user_edit']= "User was edited successfully!";
 $lang['ui_user_delete']= "User was deleted successfully!";
 $lang['ui_question_thanks']= "Thank you, your question was submitted!";
 $lang['ui_next']= "Choose and go to the next reservation step";
-
+$lang['ui_no_ticket']= "Ticket not found by provided reservation id.";
+$lang['ui_incorrect_password']= "Incorrect password and/or login.";
+$lang['ui_do_not_exist']= "User does not exist.";

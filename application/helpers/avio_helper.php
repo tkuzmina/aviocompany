@@ -25,7 +25,7 @@ if (!function_exists('init_avio_page')) {
     function init_avio_page($session, $lang) {
         $language = $session->userdata('language');
         if (!$language) {
-            $language = 'en';
+            $language = 'lv';
         }
         $lang->load('ui', $language);
     }

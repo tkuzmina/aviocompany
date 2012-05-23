@@ -7,21 +7,14 @@ class Tickets_model extends CI_Model {
         $tickets = $query->result();
         return $tickets;
     }
-
+    #getting ticket by id
     function get_ticket($id) {
         $sql = "select * from tickets where id=".$id;
         $query = $this->db->query($sql);
         $result = $query->result();
         return count($result) == 0 ? NULL : $result[0];
-    /*
-        if (count($result) == 0){
-            return NULL;
-        } else {
-            return $result[0];
-        }
-   */
     }
-
+    #getting ticket by flight_id
     function get_tickets_by_flight($flight_id) {
         $query = $this->db->query("select * from tickets where flight_to_id=".$flight_id." or flight_return_id=".$flight_id." order by class_id, id");
         $tickets = $query->result();

@@ -44,7 +44,8 @@ class Flight_search extends CI_Controller {
         }
         return $result;
     }
-
+	
+#function search flight by certain parameter
     function search_by_params() {
         $search_params = array(
                    'city_from_id' => $this->input->post('city_from_id'),

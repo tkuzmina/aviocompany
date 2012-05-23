@@ -7,7 +7,7 @@ class Passenger_types_model extends CI_Model {
         $classes = $query->result();
         $class_map = array();
         foreach($classes as $class) {
-            $class_map[$class->id] = $class->name;
+            $class_map[$class->id] = $class->name;# array("1" => "adult", "2" => "child", "3" => "infant", )
         }
         return $class_map;
     }

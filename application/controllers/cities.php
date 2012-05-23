@@ -7,8 +7,8 @@ class Cities extends CI_Controller {
         $this->load->library(array('encrypt', 'form_validation', 'session', 'lang'));
 		$this->load->helper(array('form', 'url', 'html', 'avio'));
 	    $this->load->model(array('cities_model'));
-
-        init_avio_page($this->session, $this->lang);
+        
+        init_avio_page($this->session, $this->lang);#set language, default language latvian
 	}
 
     function index() {
@@ -22,14 +22,14 @@ class Cities extends CI_Controller {
 	function add() {
         $name = $this->input->post('name');
         $this->cities_model->insert_city($name);
-		$this->session->set_flashdata('info', $this->lang->line('ui_city_add'));
+		$this->session->set_flashdata('info', $this->lang->line('ui_city_add'));#success message after adding city
         redirect("cities");
     }
 
     function delete() {
         $city_id = $this->input->get('city_id');
         $this->cities_model->delete_city($city_id);
-		$this->session->set_flashdata('info', $this->lang->line('ui_city_delete'));
+		$this->session->set_flashdata('info', $this->lang->line('ui_city_delete'));#success message after deleting city
         redirect("cities");
     }
 
@@ -37,7 +37,7 @@ class Cities extends CI_Controller {
         $city_id = $this->input->post('city_id');
         $name = $this->input->post('name');
         $this->cities_model->update_city($city_id,$name);
-		$this->session->set_flashdata('info', $this->lang->line('ui_city_edit'));
+		$this->session->set_flashdata('info', $this->lang->line('ui_city_edit'));#success message after editing city
         redirect("cities");
     }
 

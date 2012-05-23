@@ -86,8 +86,8 @@
 <?=form_hidden('passenger_count', $passenger_no)?>
 
 <div class="pull-right">
-<a class="btn pad-right" href='<?=avio_url("flight_search")?>'><?=$this->lang->line('ui_cancel')?></a>
-<?= form_submit("add", $this->lang->line('ui_buy'), "class='btn btn-primary'") ?>
+    <a class="btn pad-right" href='<?=avio_url("flight_search")?>'><?=$this->lang->line('ui_cancel')?></a>
+    <?= form_submit("add", $this->lang->line('ui_buy'), "class='btn btn-primary'") ?>
 </div>
 
  <?=form_close();?>

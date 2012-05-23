@@ -19,13 +19,13 @@ class Users extends CI_Controller {
         $user = $this->users_model->get_by_login($login);
         if ($user) {
             if ($password == $this->decrypt_password($user->password)) {
+			#set_userdata sets a value to session
                 $this->session->set_userdata('current_user', $user);
-                /* set_userdata sets a value to session */
             } else {
-                $this->session->set_flashdata('message', 'Incorrect password and/or login.');
+                $this->session->set_flashdata('message', $this->lang->line('ui_incorrect_password'));
             }
         } else {
-            $this->session->set_flashdata('message', 'User does not exist.');
+            $this->session->set_flashdata('message', $this->lang->line('ui_do_not_exist'));
         }
 
         redirect("main");
@@ -75,11 +75,11 @@ class Users extends CI_Controller {
         $this->session->set_flashdata('info',  $this->lang->line('ui_user_edit'));  
         redirect("users");
     }
-
+    #password encrypt
     private function encrypt_password($decrypted_password) {
         return $this->encrypt->encode($decrypted_password);
     }
-
+    #decrypt password
     private function decrypt_password($encrypted_password) {
         return $this->encrypt->decode($encrypted_password);
     }

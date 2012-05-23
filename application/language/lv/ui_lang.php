@@ -119,3 +119,6 @@ $lang['ui_user_edit']= "Lietotājs bija veiksmīgi rediģēts!";
 $lang['ui_user_delete']= "Lietotājs bija veiksmīgi izdzēsts!";
 $lang['ui_question_thanks']= "Paldies,Jūsu jautājums tika veiksmīgi pievienots!";
 $lang['ui_choose']= "Izvēlēties un pāriet nākamajā rezervācijas solī";
+$lang['ui_no_ticket']= "Biļete nebija atrasta pēc noteikta id!";
+$lang['ui_incorrect_password']= "Nepareiza parole vai lietotājvārds!";
+$lang['ui_do_not_exist']= "Lietotājs neeksistē.";

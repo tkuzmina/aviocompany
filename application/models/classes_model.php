@@ -7,7 +7,7 @@ class Classes_model extends CI_Model {
         $classes = $query->result();
         $class_map = array();
         foreach($classes as $class) {
-            $class_map[$class->id] = $class->name; // array("1" => "economy", "2" => "business")
+            $class_map[$class->id] = $class->name; # array("1" => "economy", "2" => "business")
         }
         return $class_map;
     }

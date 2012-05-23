@@ -21,7 +21,7 @@ class Questions extends CI_Controller {
     function delete() {
         $question_id = $this->input->get('question_id');
         $this->questions_model->delete_question($question_id);
-		$this->session->set_flashdata('info', $this->lang->line('ui_question_delete'));
+		$this->session->set_flashdata('info', $this->lang->line('ui_question_delete'));#success message after deleting question
         redirect("questions");
     }
 }

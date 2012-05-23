@@ -15,8 +15,9 @@ class Tickets extends CI_Controller {
     function index() {
         $ticket_id = $this->input->get('ticket_id');
         $ticket = $this->tickets_model->get_ticket($ticket_id);
+		#check the reservation id,if it isn't correct return message
         if (!$ticket) {
-            $this->session->set_flashdata('message', 'Ticket not found by provided reservation id.');
+            $this->session->set_flashdata('message', $this->lang->line('ui_no_ticket'));
             redirect('main');
             return;
         }
@@ -52,8 +53,9 @@ class Tickets extends CI_Controller {
     function print_ticket() {
         $ticket_id = $this->input->get('ticket_id');
         $ticket = $this->tickets_model->get_ticket($ticket_id);
+		#check the reservation id, if it isn't correct return message
         if (!$ticket) {
-            $this->session->set_flashdata('message', 'Ticket not found by provided reservation id.');
+            $this->session->set_flashdata('message', $this->lang->line('ui_no_ticket'));
             redirect('main');
             return;
         }
@@ -74,6 +76,7 @@ class Tickets extends CI_Controller {
         $this->load_add_ticket_view($flight_to_id, $flight_return_id);
     }
 
+	#function loads add tcket view
     function load_add_ticket_view($flight_to_id, $flight_return_id) {
         $search_params = $this->session->userdata('search_params');
         $classes = $this->classes_model->get_class_map();

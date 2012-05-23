@@ -7,7 +7,7 @@ class Roles_model extends CI_Model {
         $roles = $query->result();
         $role_map = array();
         foreach($roles as $role) {
-            $role_map[$role->id] = $role->name;
+            $role_map[$role->id] = $role->name;# array("1" => "user", "2" => "admin")
         }
         return $role_map;
     }
