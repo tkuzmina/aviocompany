@@ -6,7 +6,7 @@ class Flight_search extends CI_Controller {
         parent::__construct();
 
         $this->load->library(array('encrypt', 'form_validation', 'session', 'lang'));
-        $this->load->helper(array('form', 'url', 'html', 'avio'));
+        $this->load->helper(array('form', 'url', 'html', 'avio', 'date'));
         $this->load->model(array('flights_model', 'cities_model', 'planes_model', 'classes_model'));
 
         init_avio_page($this->session, $this->lang);
@@ -22,6 +22,7 @@ class Flight_search extends CI_Controller {
         $flights_return = $date_return ? $this->flights_model->get_flights_by_criteria($search_params, false) : NULL;
         $data['city_list'] = $city_list;
 		$data['plane_list'] = $plane_list;
+        $data['adult_count_list'] = $this->get_count_list(1);
 		$data['count_list'] = $this->get_count_list();
 		$data['classes_list'] = $classes_list;
         $data['city_from_id'] = get_value('city_from_id', $search_params);
@@ -37,9 +38,9 @@ class Flight_search extends CI_Controller {
         $this->load->view('flight_search_view', $data);
     }
 
-    function get_count_list(){
+    function get_count_list($start = 0){
         $result = array();
-        for($count = 0; $count <= 9; $count++){
+        for($count = $start; $count <= 9; $count++){
             $result[$count] = $count;
         }
         return $result;
@@ -47,6 +48,22 @@ class Flight_search extends CI_Controller {
 	
 #function search flight by certain parameter
     function search_by_params() {
+        $date_to = strtotime($this->input->post('date_to'));
+        $date_return = strtotime($this->input->post('date_return'));
+        $date_now = strtotime(date("Y-m-d"));
+
+        if (($date_to && ($date_to <= $date_now)) || ($date_return && ($date_return <= $date_now))) {
+            $this->session->set_flashdata("message", $this->lang->line('ui_dates_in_past'));
+            redirect("flight_search");
+            return;
+        }
+
+        if ($date_to && $date_return && ($date_return < $date_to)) {
+            $this->session->set_flashdata("message", $this->lang->line('ui_dates_not_match'));
+            redirect("flight_search");
+            return;
+        }
+
         $search_params = array(
                    'city_from_id' => $this->input->post('city_from_id'),
                    'city_to_id' => $this->input->post('city_to_id'),

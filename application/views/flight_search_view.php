@@ -72,7 +72,7 @@
     <?php endforeach; ?>
         </table>
     <?php else: ?>
-        <h2><th><?=$this->lang->line('ui_no_flights_found')?></th>.</h2>
+        <h2><?=$this->lang->line('ui_no_flights_found')?>.</h2>
     <?php endif; ?>
     </td>
     <?php endif; ?>

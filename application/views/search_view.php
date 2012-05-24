@@ -23,7 +23,7 @@
         <td><strong><?=$this->lang->line('ui_class')?>:</strong></td>
     </tr>
     <tr>
-        <td><?=form_dropdown('adult_count', $count_list, $adult_count, "class='span1'")?></td>
+        <td><?=form_dropdown('adult_count', $adult_count_list, $adult_count, "class='span1'")?></td>
         <td><?=form_dropdown('child_count', $count_list, $child_count, "class='span1'")?></td>
         <td><?=form_dropdown('infant_count', $count_list, $infant_count, "class='span1'")?></td>
         <td><?=form_dropdown('class_id', $classes_list, $class_id, "class='fill'")?></td>

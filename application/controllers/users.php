@@ -75,11 +75,11 @@ class Users extends CI_Controller {
         $this->session->set_flashdata('info',  $this->lang->line('ui_user_edit'));  
         redirect("users");
     }
-    #password encrypt
+    # password encryption
     private function encrypt_password($decrypted_password) {
         return $this->encrypt->encode($decrypted_password);
     }
-    #decrypt password
+    # password decryption
     private function decrypt_password($encrypted_password) {
         return $this->encrypt->decode($encrypted_password);
     }

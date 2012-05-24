@@ -53,6 +53,24 @@
 </tr>
 <?php endforeach ?>
 </table>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th><?=$this->lang->line('ui_cardholder_name')?></th>
+        <th><?=$this->lang->line('ui_card_number')?></th>
+        <th><?=$this->lang->line('ui_card_expiration_date')?></th>
+        <th><?=$this->lang->line('ui_card_cvv2')?></th>
+    </tr>
+    </thead>
+    <tr>
+        <td> <?=$ticket->cardholder_name?>
+        <td> <?=$ticket->card_number?>
+        <td> <?=$ticket->card_expiration_date?>
+        <td> <?=$ticket->card_cvv2?>
+    </tr>
+</table>
+
 <?php endforeach ?>
 
 <?php include("footer.php"); ?>

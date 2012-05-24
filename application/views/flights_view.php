@@ -35,11 +35,11 @@
     <tr>
         <td rowspan="2">
             <div class='view_data <?=$view_id?>'><?=$city_list[$flight->city_from_id]?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_dropdown('city_from_id', $city_list, $flight->city_from_id, "class='span2'")?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_dropdown('city_from_id', $city_list, $flight->city_from_id, "class='span1_5'")?></div>
         </td>
         <td rowspan="2">
             <div class='view_data <?=$view_id?>'><?=$city_list[$flight->city_to_id]?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_dropdown('city_to_id', $city_list, $flight->city_to_id, "class='span2'")?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_dropdown('city_to_id', $city_list, $flight->city_to_id, "class='span1_5'")?></div>
         </td>
         <td rowspan="2">
             <div class='view_data <?=$view_id?>'><?=$flight->date_from?></div>
@@ -51,7 +51,7 @@
         </td>
         <td rowspan="2">
             <div class='view_data <?=$view_id?>'><?=$plane_list[$flight->plane_id]?></div>
-            <div class='edit_data <?=$edit_id?>'><?=form_dropdown('plane_id', $plane_list, $flight->plane_id, "class='span2'")?></div>
+            <div class='edit_data <?=$edit_id?>'><?=form_dropdown('plane_id', $plane_list, $flight->plane_id, "class='span1_5'")?></div>
         </td>
         <td rowspan="2"><?= $flight->free_economy ?> / <?= $flight->seats_economy ?></td>
         <td rowspan="2"><?= $flight->free_business ?> / <?= $flight->seats_business ?></td>

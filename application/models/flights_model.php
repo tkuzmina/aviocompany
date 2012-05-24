@@ -2,12 +2,14 @@
 
 class Flights_model extends CI_Model {
 
+    // query that searches for flights and information from linked tables (cities, planes)
     private $FLIGHT_SQL = "select f.*, c_to.name as city_to_name, c_from.name as city_from_name,
             p.model as plane_model, p.seats_economy as seats_economy, p.seats_business as seats_business
         from flights f, cities c_to, cities c_from, planes p
         where f.city_from_id = c_from.id and f.city_to_id = c_to.id and f.plane_id = p.id";
 
-    private $FREE_SQL = "select f.id as id, t.class_id as class_id, count(f.id) as occupied from flights f, tickets t, passengers pa
+    // query that searches for count of occupied seats by flight and class
+    private $OCCUPIED_SQL = "select f.id as id, t.class_id as class_id, count(f.id) as occupied from flights f, tickets t, passengers pa
         where (t.flight_to_id = f.id or t.flight_return_id = f.id) and pa.ticket_id = t.id
         group by f.id, t.class_id";
 
@@ -106,7 +108,7 @@ class Flights_model extends CI_Model {
     }
 
     function count_free_spaces($flights) {
-        $query = $this->db->query($this->FREE_SQL);
+        $query = $this->db->query($this->OCCUPIED_SQL);
         $occupied = $query->result();
         foreach ($flights as $flight) {
             $occupied_economy = $this->get_occupied_spaces($flight->id, 1, $occupied);

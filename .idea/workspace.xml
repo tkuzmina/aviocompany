@@ -72,86 +72,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="questions.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/questions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cities.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/cities.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="questions_model.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/questions_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="46" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stage.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/stage.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="0" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ui_lang.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/language/en/ui_lang.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_view.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/main_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="0" selection-start="3138" selection-end="3138" vertical-scroll-proportion="-22.076923">
-              <folding>
-                <marker date="1337553102832" expanded="true" signature="2068:2218" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2068:2218" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2068:2218" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2068:2218" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2069:2219" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2069:2219" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2069:2219" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2095:2245" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2095:2245" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2095:2245" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2096:2246" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2096:2246" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2096:2246" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2180:2218" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2180:2218" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2180:2218" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2180:2218" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2207:2245" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2207:2245" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2388:2480" placeholder="..." />
-                <marker date="1337553102832" expanded="true" signature="2631:2690" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="67" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.4764992">
+            <state line="17" column="0" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="flight_search.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/flight_search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="37" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -160,25 +93,34 @@
       <file leaf-file-name="add_ticket_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/add_ticket_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="33" selection-end="147" vertical-scroll-proportion="-1.9615384">
+            <state line="66" column="47" selection-start="2572" selection-end="2572" vertical-scroll-proportion="-9.153846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tickets.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/tickets.php">
+      <file leaf-file-name="ui_lang.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/language/en/ui_lang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="0" selection-start="5403" selection-end="5403" vertical-scroll-proportion="0.0">
+            <state line="100" column="19" selection-start="4138" selection-end="4138" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/news.php">
+      <file leaf-file-name="ui_lang.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/language/lv/ui_lang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
+            <state line="30" column="95" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui_lang.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/language/ru/ui_lang.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="34" selection-start="4315" selection-end="4315" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -199,22 +141,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/flights_view.php" />
-        <option value="$PROJECT_DIR$/application/models/flights_model.php" />
-        <option value="$PROJECT_DIR$/application/views/print_ticket_view.php" />
-        <option value="$PROJECT_DIR$/application/controllers/cities.php" />
         <option value="$PROJECT_DIR$/css/aviocompany.css" />
-        <option value="$PROJECT_DIR$/application/helpers/avio_helper.php" />
-        <option value="$PROJECT_DIR$/application/controllers/tickets.php" />
-        <option value="$PROJECT_DIR$/application/views/header.php" />
-        <option value="$PROJECT_DIR$/application/language/en/ui_lang.php" />
+        <option value="$PROJECT_DIR$/application/views/flights_view.php" />
+        <option value="$PROJECT_DIR$/application/views/flight_search_view.php" />
         <option value="$PROJECT_DIR$/sql/stage.sql" />
-        <option value="$PROJECT_DIR$/application/models/questions_model.php" />
-        <option value="$PROJECT_DIR$/application/views/questions_view.php" />
-        <option value="$PROJECT_DIR$/application/controllers/questions.php" />
         <option value="$PROJECT_DIR$/application/views/add_ticket_view.php" />
-        <option value="$PROJECT_DIR$/application/views/main_view.php" />
+        <option value="$PROJECT_DIR$/application/models/tickets_model.php" />
+        <option value="$PROJECT_DIR$/application/views/tickets_view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/tickets.php" />
+        <option value="$PROJECT_DIR$/application/helpers/avio_helper.php" />
+        <option value="$PROJECT_DIR$/application/views/header.php" />
+        <option value="$PROJECT_DIR$/application/views/search_view.php" />
         <option value="$PROJECT_DIR$/application/controllers/main.php" />
+        <option value="$PROJECT_DIR$/application/controllers/flight_search.php" />
+        <option value="$PROJECT_DIR$/application/language/en/ui_lang.php" />
+        <option value="$PROJECT_DIR$/application/language/ru/ui_lang.php" />
+        <option value="$PROJECT_DIR$/application/language/lv/ui_lang.php" />
       </list>
     </option>
   </component>
@@ -257,6 +199,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,215 +219,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="language" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="language" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="language" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="en" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aviocompany" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Favorites" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="fileTemplates" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="PublishConfig" serverName="xampp" serverId="0933acd1-7eb4-42db-9f38-3b95600ed960" autoUpload="true">
     <servers>
@@ -595,14 +343,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1692" height="1026" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33892617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33892617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27740493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27740493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -614,7 +362,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22570726" sideWeight="0.7225951" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22515337" sideWeight="0.6610738" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
@@ -698,138 +446,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/flight_search.php">
+    <entry file="file://$PROJECT_DIR$/application/views/planes_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/cities_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="91" selection-start="3010" selection-end="3010" vertical-scroll-proportion="-7.8461537">
-          <folding>
-            <marker date="1337551606699" expanded="true" signature="4170:4215" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/stage.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="0" selection-start="3745" selection-end="3745" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/news_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="241" selection-end="286" vertical-scroll-proportion="0.3306321">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/questions_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="372" selection-end="372" vertical-scroll-proportion="-8.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/questions_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="46" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/cities.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
+        <state line="61" column="49" selection-start="2666" selection-end="2666" vertical-scroll-proportion="0.031716418">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/questions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+        <state line="19" column="69" selection-start="559" selection-end="559" vertical-scroll-proportion="0.5747331">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/en/ui_lang.php">
+    <entry file="file://$PROJECT_DIR$/sql/stage.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tickets_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.17258883">
+        <state line="112" column="22" selection-start="3150" selection-end="3150" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/tickets.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="0" selection-start="5403" selection-end="5403" vertical-scroll-proportion="0.0">
+        <state line="140" column="111" selection-start="6698" selection-end="6698" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/avio_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="88" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/tickets_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="25" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/tickets_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="22" selection-start="2323" selection-end="2323" vertical-scroll-proportion="-17.346153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/language/english/form_validation_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="54" selection-start="1640" selection-end="1640" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="22" selection-start="1197" selection-end="1197" vertical-scroll-proportion="-9.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/search_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="57" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-15.692307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/flight_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="37" selection-start="1671" selection-end="1671" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/add_ticket_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="33" selection-end="147" vertical-scroll-proportion="-1.9615384">
+        <state line="66" column="47" selection-start="2572" selection-end="2572" vertical-scroll-proportion="-9.153846">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main_view.php">
+    <entry file="file://$PROJECT_DIR$/application/language/en/ui_lang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="3138" selection-end="3138" vertical-scroll-proportion="-22.076923">
-          <folding>
-            <marker date="1337553102832" expanded="true" signature="2068:2218" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2068:2218" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2068:2218" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2068:2218" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2069:2219" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2069:2219" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2069:2219" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2095:2245" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2095:2245" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2095:2245" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2096:2246" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2096:2246" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2096:2246" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2180:2218" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2180:2218" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2180:2218" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2180:2218" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2207:2245" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2207:2245" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2388:2480" placeholder="..." />
-            <marker date="1337553102832" expanded="true" signature="2631:2690" placeholder="..." />
-          </folding>
+        <state line="100" column="19" selection-start="4138" selection-end="4138" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/main.php">
+    <entry file="file://$PROJECT_DIR$/application/language/ru/ui_lang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="67" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.4764992">
+        <state line="99" column="34" selection-start="4315" selection-end="4315" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/lv/ui_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="95" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.5">
           <folding />
         </state>
       </provider>

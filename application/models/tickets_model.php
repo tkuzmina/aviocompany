@@ -21,8 +21,9 @@ class Tickets_model extends CI_Model {
         return $tickets;
     }
 
-    function create_ticket($flight_to_id, $flight_return_id, $class_id) {
-        $this->db->insert('tickets', array("flight_to_id" => $flight_to_id, "flight_return_id" => $flight_return_id, "class_id" => $class_id));
+    function create_ticket($flight_to_id, $flight_return_id, $class_id, $cardholder_name, $card_number, $card_expiration_date, $card_cvv2) {
+        $this->db->insert('tickets', array("flight_to_id" => $flight_to_id, "flight_return_id" => $flight_return_id, "class_id" => $class_id,
+                                          "cardholder_name" => $cardholder_name, "card_number" => $card_number, "card_expiration_date" => $card_expiration_date, "card_cvv2" => $card_cvv2));
         return $this->db->insert_id();
     }
 }

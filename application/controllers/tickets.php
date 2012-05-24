@@ -9,7 +9,7 @@ class Tickets extends CI_Controller {
         $this->load->helper(array('form', 'url', 'html', 'avio'));
         $this->load->model(array('tickets_model', 'classes_model', 'flights_model', 'passengers_model', 'passenger_types_model'));
 
-        init_avio_page($this->session, $this->lang);
+        init_avio_page($this->session, $this->lang, $this->form_validation);
     }
 
     function index() {
@@ -111,25 +111,34 @@ class Tickets extends CI_Controller {
     function add() {
         $flight_to_id = $this->input->post('flight_to_id');
         $flight_return_id = $this->input->post('flight_return_id');
-        if (!$this->validate_passengers()) {
+        if (!$this->validate_ticket()) {
             $this->load_add_ticket_view($flight_to_id, $flight_return_id);
             return;
         }
 
         $class_id = $this->input->post('class_id');
-        $ticket_id = $this->tickets_model->create_ticket($flight_to_id, $flight_return_id, $class_id);
+        $cardholder_name = $this->input->post('cardholder_name');
+        $card_number = $this->input->post('card_number');
+        $card_expiration_date = $this->input->post('card_expiration_date');
+        $card_cvv2 = $this->input->post('card_cvv2');
+        $ticket_id = $this->tickets_model->create_ticket($flight_to_id, $flight_return_id, $class_id, $cardholder_name, $card_number, $card_expiration_date, $card_cvv2);
         for ($i = 1; $i < $this->input->post('passenger_count'); $i++) {
             $this->add_passenger($ticket_id, $i);
         }
         redirect("tickets?ticket_id=".$ticket_id);
     }
 
-    function validate_passengers() {
+    function validate_ticket() {
+        $this->form_validation->set_rules('cardholder_name', 'lang:ui_cardholder_name', 'required|max_length[255]');
+        $this->form_validation->set_rules('card_number', 'lang:ui_card_number', 'required|max_length[30]');
+        $this->form_validation->set_rules('card_expiration_date', 'lang:ui_card_expiration_date', 'required');
+        $this->form_validation->set_rules('card_cvv2', 'lang:ui_card_cvv2', 'integer|max_length[5]');
+
         for ($passenger_no = 1; $passenger_no < $this->input->post('passenger_count'); $passenger_no++) {
-            $this->form_validation->set_rules('name'.$passenger_no, 'lang:ui_passenger_name', 'required|alpha|max_length[30]');
-            $this->form_validation->set_rules('surname'.$passenger_no, 'lang:ui_passenger_surname', 'required|alpha|max_length[30]');
+            $this->form_validation->set_rules('name'.$passenger_no, 'lang:ui_passenger_name', 'required|max_length[50]');
+            $this->form_validation->set_rules('surname'.$passenger_no, 'lang:ui_passenger_surname', 'required|max_length[50]');
             $this->form_validation->set_rules('luggage_count'.$passenger_no, 'lang:ui_luggage_count', 'required|integer|less_than[10]');
-            $this->form_validation->set_rules('passport_number'.$passenger_no, 'lang:ui_passport_no', 'required|alpha_dash');
+            $this->form_validation->set_rules('passport_number'.$passenger_no, 'lang:ui_passport_no', 'required');
             $this->form_validation->set_rules('issue_date'.$passenger_no, 'lang:ui_date_of_issue', 'required');
             $this->form_validation->set_rules('expiration_date'.$passenger_no, 'lang:ui_date_of_expiration', 'required');
         }

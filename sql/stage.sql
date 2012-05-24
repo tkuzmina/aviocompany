@@ -76,6 +76,11 @@ create table tickets (
   flight_return_id int,
   class_id int not null,
 
+  cardholder_name varchar(255) not null,
+  card_number varchar(50) not null,
+  card_expiration_date date not null,
+  card_cvv2 varchar(10),
+
   primary key (id),
   foreign key (flight_to_id) references flights(id) on delete cascade,
   foreign key (flight_return_id) references flights(id) on delete cascade,

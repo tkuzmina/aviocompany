@@ -33,8 +33,8 @@
                 $(".view_data").show();
                 $(".edit_data").hide();
             });
-            $("button.switch_language").on('click', function() {
-                var lang = $(this).text();
+            $("a.switch_language").on('click', function() {
+                var lang = $(this).attr('id');
                 window.location.href = '<?=avio_url("languages/set_language?language=")?>' + lang;
             });
         });
@@ -56,9 +56,9 @@
 		</div>
 
         <div class="languages">
-            <button class="btn switch_language">en</button>
-            <button class="btn switch_language">lv</button>
-            <button class="btn switch_language">ru</button>
+            <a class="switch_language" id="en"><img class="switch_language" src='<?=avio_resource_url("img/flag_en.gif")?>' alt="en"/></a>
+            <a class="switch_language" id="lv"><img class="switch_language" src='<?=avio_resource_url("img/flag_lv.gif")?>' alt="en"/></a>
+            <a class="switch_language" id="ru"><img class="switch_language" src='<?=avio_resource_url("img/flag_ru.gif")?>' alt="en"/></a>
         </div>
 
         <?php if ($current_user): ?>

@@ -220,3 +220,7 @@ width:auto;
 */
 }
 .position{float:right;}
+
+.span1_5 {
+    width: 100px;
+}
