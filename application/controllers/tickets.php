@@ -76,7 +76,7 @@ class Tickets extends CI_Controller {
         $this->load_add_ticket_view($flight_to_id, $flight_return_id);
     }
 
-	#function loads add tcket view
+	#function loads add ticket view
     function load_add_ticket_view($flight_to_id, $flight_return_id) {
         $search_params = $this->session->userdata('search_params');
         $classes = $this->classes_model->get_class_map();

@@ -46,7 +46,7 @@ class Flight_search extends CI_Controller {
         return $result;
     }
 	
-#function search flight by certain parameter
+    #function search flight by certain parameter
     function search_by_params() {
         $date_to = strtotime($this->input->post('date_to'));
         $date_return = strtotime($this->input->post('date_return'));

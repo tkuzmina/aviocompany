@@ -113,7 +113,7 @@ table{
     font-family: Trebuchet MS;
     font-size: 14px;
     font-weight: normal;
-    padding-right: 20px;
+    padding-right: 17px;
     padding-top: 18px;
     text-decoration: none;
     text-transform: none;
@@ -224,3 +224,11 @@ width:auto;
 .span1_5 {
     width: 100px;
 }
+.languages{ 
+position:relative;
+    float: right;
+    margin-right: 15px;
+    margin-top: -49px;
+	cursor:pointer;
+}
+

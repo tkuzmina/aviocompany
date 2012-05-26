@@ -57,8 +57,8 @@
 
         <div class="languages">
             <a class="switch_language" id="en"><img class="switch_language" src='<?=avio_resource_url("img/flag_en.gif")?>' alt="en"/></a>
-            <a class="switch_language" id="lv"><img class="switch_language" src='<?=avio_resource_url("img/flag_lv.gif")?>' alt="en"/></a>
-            <a class="switch_language" id="ru"><img class="switch_language" src='<?=avio_resource_url("img/flag_ru.gif")?>' alt="en"/></a>
+            <a class="switch_language" id="lv"><img class="switch_language" src='<?=avio_resource_url("img/flag_lv.gif")?>' alt="lv"/></a>
+            <a class="switch_language" id="ru"><img class="switch_language" src='<?=avio_resource_url("img/flag_ru.gif")?>' alt="ru"/></a>
         </div>
 
         <?php if ($current_user): ?>
