@@ -17,7 +17,7 @@ if (!function_exists('avio_url')) {
 #replace avio_resource_url($relative), to a "/aviocompany/".$relative
 if (!function_exists('avio_resource_url')) {
     function avio_resource_url($relative){
-        return "/aviocompany/".$relative;
+        return "/".$relative;
     }
 }
 #function set language and load translation,if there is any form_validation than set messsage
