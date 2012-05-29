@@ -47,10 +47,16 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'aviocompany';
+//$db['default']['hostname'] = 'localhost';
+//$db['default']['username'] = 'root';
+//$db['default']['password'] = '';
+//$db['default']['database'] = 'aviocompany';
+
+$db['default']['hostname'] = 'a.db.shared.orchestra.io';
+$db['default']['username'] = 'user_90377b6a';
+$db['default']['password'] = 'oukWj1auUto@t9';
+$db['default']['database'] = 'db_90377b6a';
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
