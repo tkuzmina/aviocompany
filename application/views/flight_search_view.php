@@ -64,7 +64,7 @@
             <td><?= $flight_return->city_from_name ?></td>
             <td><?= $flight_return->city_to_name ?></td>
             <td><?= $flight_return->date_from ?></td>
-			<td><?= $flight_to->time_from ?></td>
+			<td><?= $flight_return->time_from ?></td>
             <td><?= $flight_return->plane_model ?></td>
             <td><?= $flight_return->price ?></td>
         </tr>

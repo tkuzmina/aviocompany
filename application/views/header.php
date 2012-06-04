@@ -3,8 +3,6 @@
 <head>
 
     <?=header('Content-Type: text/html; charset=utf-8');?>
-    <?=header('Cache-Control: no-cache, must-revalidate');?>
-    <?=header('Expires: Sat, 26 Jul 1997 05:00:00 GMT');?>
 
     <link href='<?=avio_resource_url("css/bootstrap.css")?>' rel="stylesheet" type="text/css"/>
     <link href='<?=avio_resource_url("css/bootstrap-responsive.css")?>' type="text/css"/>
@@ -51,9 +49,9 @@
 	    <div class="header">
 	        <a class="logo" href='<?=avio_url("main")?>'>
 			<img src='<?=avio_resource_url("img/avio.png")?>' alt="" title="" />
-			<img class="img" src='<?=avio_resource_url("img/avio_lv.png")?>' alt="" title="" />
+			<img class="img" src='<?=avio_resource_url("img/aviocompany.png")?>' alt="" title="" />
 			</a>
-	        <div class="phone"><?=$this->lang->line('ui_phone')?>:<span class="number"> &nbsp;(+371) 645 67 349</span></div>
+	        <div class="phone"><?=$this->lang->line('ui_phone')?>:<span class="number"> &nbsp;(+371) 67 467 307</span></div>
 
 		</div>
 

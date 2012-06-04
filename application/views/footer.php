@@ -1,7 +1,7 @@
 </div>
 <div class="footer">
-<p>AVIO.LV &copy; Copyright 2012. <?=$this->lang->line('ui_all_rights_reserved')?>.</p>
-<p><?=$this->lang->line('ui_contacts')?>: service@avio.lv</p>
+<p>AVIOCOMPANY.LV &copy; Copyright 2012. <?=$this->lang->line('ui_all_rights_reserved')?>.</p>
+<p><?=$this->lang->line('ui_contacts')?>: service@aviocompany.lv</p>
 
 <?php if (!$current_user): ?>
 <a data-toggle="modal" href="#login" class="login"><?=$this->lang->line('ui_user_login')?></a>
