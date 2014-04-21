@@ -57,7 +57,7 @@ $active_record = TRUE;
 //$db['default']['password'] = 'oukWj1auUto@t9';
 //$db['default']['database'] = 'db_90377b6a';
 
-$db['default']['hostname'] = 'tunnel.pagodabox.com:3306';
+$db['default']['hostname'] = 'tunnel.pagodabox.com';
 $db['default']['username'] = 'louie';
 $db['default']['password'] = 'wZhPrL2C@t9';
 $db['default']['database'] = 'aviocompany';
