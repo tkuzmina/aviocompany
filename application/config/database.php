@@ -52,10 +52,15 @@ $active_record = TRUE;
 //$db['default']['password'] = '';
 //$db['default']['database'] = 'aviocompany';
 
-$db['default']['hostname'] = 'a.db.shared.orchestra.io';
-$db['default']['username'] = 'user_90377b6a';
-$db['default']['password'] = 'oukWj1auUto@t9';
-$db['default']['database'] = 'db_90377b6a';
+//$db['default']['hostname'] = 'a.db.shared.orchestra.io';
+//$db['default']['username'] = 'user_90377b6a';
+//$db['default']['password'] = 'oukWj1auUto@t9';
+//$db['default']['database'] = 'db_90377b6a';
+
+$db['default']['hostname'] = 'tunnel.pagodabox.com:3306';
+$db['default']['username'] = 'louie';
+$db['default']['password'] = 'wZhPrL2C@t9';
+$db['default']['database'] = 'aviocompany';
 
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
