@@ -131,7 +131,7 @@
             </tr>
             </thead>
             <tr>
-                <td class="span2"><?=form_input(array('class' => 'span2 datepicker', 'name' => 'date_from', 'id' => 'date_from', 'value' => '2012-05-13'))?></td>
+                <td class="span2"><?=form_input(array('class' => 'span2 datepicker', 'name' => 'date_from', 'id' => 'date_from', 'value' => '2014-08-15'))?></td>
                 <td class="span2"><?=form_input(array('class' => 'span1 timepicker', 'name' => 'time_from', 'id' => 'time_from', 'value' => '07:00'))?></td>
                 <td class="span2"><?=form_input(array('class' => 'span1 timepicker', 'name' => 'duration', 'id' => 'duration', 'value' => '02:00'))?></td>
             </tr>
