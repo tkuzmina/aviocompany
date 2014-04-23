@@ -164,7 +164,7 @@
     </div>
   <div class="modal-footer">
       <a class="btn" id="newFlightClose"><?=$this->lang->line('ui_close')?></a>
-      <?=form_submit('edit_flight', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
+      <?=form_submit('add_flight', $this->lang->line('ui_save'), "class='btn btn-primary'")?>
   </div>
     <?=form_close();?>
 </div>
