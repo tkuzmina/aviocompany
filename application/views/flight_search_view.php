@@ -81,6 +81,9 @@
 </table>
 
 <?php if ($flights_to && (!$date_return || $flights_return)): ?>
+<div class="alert alert-info">
+	<?=$this->lang->line('ui_flight_found')?>.
+</div>
 <button id="buy" class="btn btn-primary"><th><?=$this->lang->line('ui_choose')?></th></button>
 <?php endif; ?>
 
