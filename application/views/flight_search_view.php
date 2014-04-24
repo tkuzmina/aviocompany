@@ -26,6 +26,7 @@
             </thead>
         <?php $checked = true ?>
         <?php foreach ($flights_to as $flight_to): ?>
+			<h2><?=$this->lang->line('ui_flight_found')?>.</h2>
             <tr>
                 <td><input type="radio" name="flight_to" id="flight_to" value='<?= $flight_to->id?>' <?= $checked ? 'checked' : "" ?>></td>
                 <td><?= $flight_to->city_from_name ?></td>

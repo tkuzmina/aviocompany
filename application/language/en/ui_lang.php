@@ -35,6 +35,7 @@ $lang['ui_date'] = "Date";
 $lang['ui_time_of_departure'] = "Time of departure";
 $lang['ui_plane_model'] = "Plane";
 $lang['ui_price'] = "Price";
+$lang['ui_flight_found'] = "Flight found for this date";
 $lang['ui_no_flights_found'] = "No flights found for this date";
 $lang['ui_buy'] = "Buy";
 $lang['ui_flight_date'] = "Flight date";

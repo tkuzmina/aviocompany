@@ -33,6 +33,7 @@ $lang['ui_date'] = "Datums";
 $lang['ui_time_of_departure'] = "Izlidošanas laiks";
 $lang['ui_plane_model'] = "Lidmašīna";
 $lang['ui_price'] = "Cena";
+$lang['ui_flight_found'] = "Lidojums tika atrasts uz šo datumu";
 $lang['ui_no_flights_found'] = "Netika atrasts neviens lidojums uz šo datumu";
 $lang['ui_buy'] = "Pirkt";
 $lang['ui_flight_date'] = "Lidojuma datums";
